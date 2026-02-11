@@ -181,30 +181,37 @@ import { siteConfig } from '../config/site';
   </SectionWrapper>
 
   <!-- Why Choose Us -->
-  <SectionWrapper bgColor="white">
+  <SectionWrapper bgColor="light">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div class="relative">
         <img
           src="/images/team-group.jpg"
           alt="Magnified SMSF Specialists Team"
-          class="rounded-xl shadow-xl w-full max-h-[500px] object-cover"
+          class="rounded-2xl shadow-2xl w-full max-h-[500px] object-cover ring-1 ring-neutral-200"
           loading="lazy"
         />
-        <div class="absolute bottom-4 right-4 bg-neutral-400/90 backdrop-blur-sm text-white px-6 py-3 rounded-lg shadow-lg">
-          <p class="font-bold text-sm text-center leading-tight">Trusted by Perth's<br />Professionals</p>
+        <div class="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm px-8 py-4 rounded-xl shadow-xl border border-neutral-100">
+          <p class="font-bold text-accent-500 text-sm text-center leading-tight">Trusted by Perth's<br />Professionals</p>
         </div>
       </div>
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">Why Choose Magnified SMSF Specialists?</h2>
-        <p class="text-neutral-700 text-lg leading-relaxed mb-6">
-          Choosing the right partner for your SMSF makes all the difference. At Magnified SMSF Specialists, our commitment extends beyond numbers; we prioritise proactive compliance management to ensure your SMSF remains ATO-compliant and stress-free.
-        </p>
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Our Promise</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-3">Why Choose Magnified SMSF Specialists?</h2>
+        <div class="w-16 h-1 bg-accent-500 rounded-full mb-8"></div>
+        <div class="border-l-4 border-accent-500 pl-6 mb-6">
+          <p class="text-neutral-700 text-lg leading-relaxed">
+            Choosing the right partner for your SMSF makes all the difference. At Magnified SMSF Specialists, our commitment extends beyond numbers; we prioritise proactive compliance management to ensure your SMSF remains ATO-compliant and stress-free.
+          </p>
+        </div>
         <p class="text-neutral-700 text-lg leading-relaxed mb-6">
           Our approach is uniquely focused on providing strategic investment guidance, integrating estate planning, and maximising tax efficiency through regular quarterly reviews. We believe in unparalleled service and support, offering direct access to senior specialists and ongoing trustee education.
         </p>
-        <p class="text-neutral-700 text-lg leading-relaxed">
+        <p class="text-neutral-700 text-lg leading-relaxed mb-8">
           This holistic methodology, combined with our local presence and empowering technology, ensures your journey to retirement is managed with confidence and optimised for success.
         </p>
+        <Button href="/contact-us/" variant="primary" size="lg">
+          Book Your Free Discovery Session
+        </Button>
       </div>
     </div>
   </SectionWrapper>
