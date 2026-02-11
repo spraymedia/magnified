@@ -39,13 +39,18 @@ const navLinks = [
               <a
                 href={link.href}
                 class:list={[
-                  'text-sm font-semibold tracking-wide uppercase transition-colors duration-200',
+                  'inline-flex items-center gap-1 text-sm font-semibold tracking-wide uppercase transition-colors duration-200',
                   currentPath === link.href || currentPath.startsWith(link.href.replace(/\/$/, '') + '/')
                     ? 'text-accent-500'
                     : 'text-primary-500 hover:text-accent-500',
                 ]}
               >
                 {link.label}
+                {link.children && (
+                  <svg class="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                )}
               </a>
               {link.children && (
                 <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -102,25 +107,54 @@ const navLinks = [
       {
         navLinks.map((link) => (
           <>
-            <a
-              href={link.href}
-              class:list={[
-                'block px-3 py-2.5 rounded-md text-sm font-semibold',
-                currentPath === link.href
-                  ? 'text-accent-500 bg-primary-50'
-                  : 'text-primary-500 hover:bg-neutral-50',
-              ]}
-            >
-              {link.label}
-            </a>
-            {link.children?.map((child) => (
+            {link.children ? (
+              <div>
+                <div class="flex items-center">
+                  <a
+                    href={link.href}
+                    class:list={[
+                      'flex-1 block px-3 py-2.5 rounded-md text-sm font-semibold',
+                      currentPath === link.href || currentPath.startsWith(link.href.replace(/\/$/, '') + '/')
+                        ? 'text-accent-500 bg-primary-50'
+                        : 'text-primary-500 hover:bg-neutral-50',
+                    ]}
+                  >
+                    {link.label}
+                  </a>
+                  <button
+                    class="mobile-submenu-toggle p-2.5 rounded-md text-primary-500 hover:bg-neutral-50"
+                    aria-expanded="false"
+                    aria-label={`Toggle ${link.label} submenu`}
+                  >
+                    <svg class="h-4 w-4 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="mobile-submenu hidden">
+                  {link.children.map((child) => (
+                    <a
+                      href={child.href}
+                      class="block pl-8 pr-3 py-2 text-sm text-neutral-600 hover:bg-neutral-50 rounded-md"
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : (
               <a
-                href={child.href}
-                class="block pl-8 pr-3 py-2 text-sm text-neutral-600 hover:bg-neutral-50 rounded-md"
+                href={link.href}
+                class:list={[
+                  'block px-3 py-2.5 rounded-md text-sm font-semibold',
+                  currentPath === link.href
+                    ? 'text-accent-500 bg-primary-50'
+                    : 'text-primary-500 hover:bg-neutral-50',
+                ]}
               >
-                {child.label}
+                {link.label}
               </a>
-            ))}
+            )}
           </>
         ))
       }
@@ -152,6 +186,17 @@ const navLinks = [
       openIcon?.classList.toggle('hidden');
       closeIcon?.classList.toggle('hidden');
       toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    document.querySelectorAll('.mobile-submenu-toggle').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const submenu = btn.closest('div')?.querySelector('.mobile-submenu');
+        const chevron = btn.querySelector('svg');
+        const isOpen = !submenu?.classList.contains('hidden');
+        submenu?.classList.toggle('hidden');
+        chevron?.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
     });
   });
 </script>
