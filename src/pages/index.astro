@@ -1,17 +1,280 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import SectionWrapper from '../components/ui/SectionWrapper.astro';
+import Button from '../components/ui/Button.astro';
+import ServicesGrid from '../components/modules/ServicesGrid.astro';
+import ReviewsSection from '../components/modules/ReviewsSection.astro';
+import HowWeWorkSection from '../components/modules/HowWeWorkSection.astro';
+import ValuesSection from '../components/modules/ValuesSection.astro';
+import ContactSection from '../components/modules/ContactSection.astro';
+import { siteConfig } from '../config/site';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Take Control of Your Retirement Journey with True SMSF Specialists"
+  description="Secure your financial future with expert SMSF compliance management, personalised support, and practical guidance tailored to your fund's needs. Magnified SMSF Specialists in Perth & Mandurah."
+>
+  <!-- Hero Section -->
+  <section class="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/hero-bg.jpg"
+        alt="Magnified SMSF Specialists Perth"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-black/20"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
+      <div class="max-w-xl">
+        <div class="bg-white/85 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-xl">
+          <h1 class="text-3xl md:text-4xl font-bold text-primary-500 leading-tight mb-5">
+            Take Control of Your Retirement Journey with True SMSF Specialists
+          </h1>
+          <p class="text-base md:text-lg text-neutral-700 leading-relaxed mb-6">
+            Secure your financial future with expert SMSF compliance management, personalised support, and practical guidance tailored to your fund's needs. At Magnified SMSF Specialists, we simplify the complex world of super, helping you make confident, informed decisions about managing your retirement savings
+          </p>
+          <Button href="/contact-us/" variant="primary" size="lg">
+            Book Your Free Discovery Session
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <SectionWrapper bgColor="white" padding="md">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+      <div class="p-4">
+        <div class="text-accent-500 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+        </div>
+        <h3 class="font-bold text-primary-500 text-lg">Over 18 Years of Specialist Experience</h3>
+      </div>
+      <div class="p-4">
+        <div class="text-accent-500 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a8 8 0 0 0-16 0"></path><circle cx="10" cy="8" r="5"></circle><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></svg>
+        </div>
+        <h3 class="font-bold text-primary-500 text-lg">Local, Dedicated Support Team</h3>
+      </div>
+      <div class="p-4">
+        <div class="text-accent-500 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+        </div>
+        <h3 class="font-bold text-primary-500 text-lg">Personalised, Proactive Client Care</h3>
+      </div>
+      <div class="p-4">
+        <div class="text-accent-500 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+        </div>
+        <h3 class="font-bold text-primary-500 text-lg">Valued by SMSF Trustees Across Western Australia</h3>
+      </div>
+    </div>
+    <div class="text-center mt-6">
+      <p class="text-neutral-600 italic text-lg">
+        We act with Integrity, grow through Teamwork, spark Innovation, build Trust, and Empower people to thrive.
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- Expert SMSF Management -->
+  <SectionWrapper bgColor="light">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Expert SMSF Management with Magnified SMSF Specialists</h2>
+        <p class="text-neutral-700 text-lg leading-relaxed mb-6">
+          Managing your super shouldn't feel overwhelming. We work closely with you to navigate your SMSF compliance obligations and administrative needs. Whether you're setting up an SMSF or maintaining your fund's records, we're here to help you meet your trustee responsibilities with clarity.
+        </p>
+        <Button href="/contact-us/" variant="primary" size="md">
+          Book Now
+        </Button>
+      </div>
+      <div class="relative">
+        <img
+          src="/images/perth-mandurah.jpg"
+          alt="Magnified SMSF Specialists Premium Services in Perth and Mandurah"
+          class="rounded-xl shadow-xl w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Meet Your Strategic Partner -->
+  <SectionWrapper bgColor="white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1">
+        <div class="relative">
+          <img
+            src="/images/magda-betlem.jpg"
+            alt="Magda Betlem - Principal SMSF Specialist"
+            class="rounded-xl shadow-xl w-full max-w-md mx-auto object-cover"
+            loading="lazy"
+          />
+          <img
+            src="/images/smsf-accredited.png"
+            alt="SMSF Association Accredited Specialist"
+            class="absolute -bottom-4 -right-4 h-24 w-auto bg-white rounded-lg p-2 shadow-lg"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Meet Your Strategic Partner</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Magda Betlem</h2>
+        <p class="text-accent-500 font-semibold mb-6">Principal SMSF Specialist</p>
+        <p class="text-neutral-700 leading-relaxed">
+          With over 18 years of dedicated SMSF expertise, Magda Betlem (CPA) leads our specialist team with passion and integrity. As an Authorised Representative of the SMSF Advisers Network (SAN, AFSL 430062), she helps clients confidently manage their fund's compliance, solve complex SMSF challenges allowing trustees to benefit from the investment flexibility that SMSFs offer whilst ensuring your reporting obligations are met. Supporting clients across Mandurah, Perth, and regional WA, Magda and her team deliver the personal touch and technical depth that makes all the difference.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Services Grid -->
+  <ServicesGrid />
+
+  <!-- Is This You? -->
+  <SectionWrapper bgColor="light">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Is This You?</h2>
+        <p class="text-neutral-700 text-lg mb-6">
+          At Magnified SMSF Specialists, we help SMSF trustees and future trustees who want clarity and confidence managing their super. Our services are ideally suited for individuals who:
+        </p>
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Are preparing for retirement, often aged 55 to 65</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Hold a super balance of $600,000 or more</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Earn a personal income of $150,000+ annually</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Value tailored SMSF compliance support and investment strategy documentation</span>
+          </li>
+        </ul>
+        <p class="text-neutral-700">
+          If you're outside these ranges but value expert SMSF compliance services, we're still here to help.
+          <a href="/contact-us/" class="text-accent-500 font-semibold hover:underline ml-1">Book Now</a>
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img src="/images/hero-1.jpg" alt="SMSF Specialist consultation" class="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg mt-8">
+          <img src="/images/hero-2.jpg" alt="Financial planning meeting" class="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg -mt-8">
+          <img src="/images/hero-3.jpg" alt="SMSF compliance review" class="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img src="/images/hero-4.jpg" alt="Retirement planning session" class="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Trusted by Perth's Professionals -->
+  <SectionWrapper bgColor="white" padding="md">
+    <div class="text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Trusted by Perth's Professionals</h2>
+      <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
+        <img src="/images/icons/harvey-water.png" alt="Harvey Water" class="h-12 w-auto" loading="lazy" />
+        <img src="/images/icons/icon-1.png" alt="Trusted client" class="h-12 w-auto" loading="lazy" />
+        <img src="/images/icons/icon-2.png" alt="Trusted client" class="h-12 w-auto" loading="lazy" />
+        <img src="/images/icons/icon-3.png" alt="Trusted client" class="h-12 w-auto" loading="lazy" />
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Why Choose Us -->
+  <SectionWrapper bgColor="primary">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Why Choose Magnified SMSF Specialists?</h2>
+      <p class="text-primary-100 text-lg leading-relaxed">
+        Choosing the right partner for your SMSF makes all the difference. At Magnified SMSF Specialists, our commitment extends beyond numbers; we prioritise proactive compliance management to ensure your SMSF remains ATO-compliant and stress-free. Our approach is uniquely focused on providing strategic investment guidance, integrating estate planning, and maximising tax efficiency through regular quarterly reviews. We believe in unparalleled service and support, offering direct access to senior specialists and ongoing trustee education. This holistic methodology, combined with our local presence and empowering technology, ensures your journey to retirement is managed with confidence and optimised for success.
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- Local Expertise -->
+  <SectionWrapper bgColor="white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Local Expertise, Premium Services in Perth & Mandurah</h2>
+        <p class="text-neutral-700 text-lg mb-6">
+          Conveniently located in Mandurah, we provide premium SMSF services to clients throughout the Perth metropolitan area. Our strategic location allows us to offer:
+        </p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-500 flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Face-to-face consultations</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-500 flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Flexible meeting arrangements</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-500 flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Personalised Service Delivery</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <img
+          src="/images/perth-mandurah.jpg"
+          alt="Magnified SMSF Specialists Premium Services in Perth and Mandurah"
+          class="rounded-xl shadow-xl w-full"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Technology Section -->
+  <SectionWrapper bgColor="light">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Technology That Empowers You: The Class Super Portal</h2>
+      <p class="text-neutral-700 text-lg mb-8">
+        Access your SMSF information anytime, anywhere through our state-of-the-art Class Super portal:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"></line><line x1="18" x2="18" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="16"></line></svg>
+          <h3 class="font-bold text-primary-500 mb-1">Regular balance updates</h3>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
+          <h3 class="font-bold text-primary-500 mb-1">Performance tracking</h3>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+          <h3 class="font-bold text-primary-500 mb-1">Document management</h3>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+          <h3 class="font-bold text-primary-500 mb-1">Secure communication platform</h3>
+        </div>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Values -->
+  <ValuesSection />
+
+  <!-- Reviews -->
+  <ReviewsSection />
+
+  <!-- How We Work -->
+  <HowWeWorkSection />
+
+  <!-- Contact Section -->
+  <ContactSection />
+</Layout>

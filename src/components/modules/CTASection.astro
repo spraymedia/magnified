@@ -1,0 +1,30 @@
+---
+import SectionWrapper from '../ui/SectionWrapper.astro';
+import Button from '../ui/Button.astro';
+import { siteConfig } from '../../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Take the Next Step Towards Your Retirement Goals',
+  description = 'Ready to discuss your SMSF needs, explore a strategic partnership, or simply have a question? Our specialist team is here to provide expert guidance and support for your retirement journey',
+} = Astro.props;
+---
+
+<SectionWrapper bgColor="primary" id="cta">
+  <div class="text-center max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">{title}</h2>
+    <p class="text-primary-200 text-lg mb-8">{description}</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <Button href="/contact-us/" variant="primary" size="lg">
+        Book Your Free Discovery Session
+      </Button>
+      <Button href={`tel:${siteConfig.phone.replace(/\s/g, '')}`} variant="white" size="lg">
+        Call Now: {siteConfig.phone}
+      </Button>
+    </div>
+  </div>
+</SectionWrapper>

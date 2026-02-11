@@ -1,0 +1,196 @@
+---
+import SectionWrapper from '../ui/SectionWrapper.astro';
+import Button from '../ui/Button.astro';
+import ServicesGrid from './ServicesGrid.astro';
+import ValuesSection from './ValuesSection.astro';
+import ReviewsSection from './ReviewsSection.astro';
+import HowWeWorkSection from './HowWeWorkSection.astro';
+import ContactSection from './ContactSection.astro';
+import { siteConfig } from '../../config/site';
+
+interface Props {
+  locationName: string;
+  heroSubheading: string;
+  trustedPartnerText: string;
+  servicesIntro: string;
+  isThisYouIntro: string;
+  whyTrustsIntro: string;
+  dedicatedSupportText: string;
+  trustedByText: string;
+  contactIntro: string;
+}
+
+const {
+  locationName,
+  heroSubheading,
+  trustedPartnerText,
+  servicesIntro,
+  isThisYouIntro,
+  whyTrustsIntro,
+  dedicatedSupportText,
+  trustedByText,
+  contactIntro,
+} = Astro.props;
+---
+
+<!-- Hero -->
+<section class="bg-primary-500 text-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">SMSF Specialists in {locationName}</h1>
+      <p class="text-lg text-primary-100 leading-relaxed mb-8">{heroSubheading}</p>
+      <Button href="/contact-us/" variant="primary" size="lg">
+        Book Your Free Discovery Session
+      </Button>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<SectionWrapper bgColor="white" padding="md">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+    <div class="p-4">
+      <h3 class="font-bold text-primary-500">Over 18 Years of Specialist Experience</h3>
+    </div>
+    <div class="p-4">
+      <h3 class="font-bold text-primary-500">Local, Dedicated Support Team</h3>
+    </div>
+    <div class="p-4">
+      <h3 class="font-bold text-primary-500">Personalised, Proactive Client Care</h3>
+    </div>
+    <div class="p-4">
+      <h3 class="font-bold text-primary-500">Valued by SMSF Trustees Across Western Australia</h3>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <p class="text-neutral-600 italic">
+      We act with Integrity, grow through Teamwork, spark Innovation, build Trust, and Empower people to thrive.
+    </p>
+  </div>
+</SectionWrapper>
+
+<!-- Trusted Partner -->
+<SectionWrapper bgColor="light">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Your Trusted Partner for Retirement Control in {locationName}</h2>
+      <p class="text-neutral-700 text-lg leading-relaxed mb-6">{trustedPartnerText}</p>
+      <Button href="/contact-us/" variant="primary" size="md">Book Now</Button>
+    </div>
+    <div class="relative">
+      <img
+        src="/images/perth-mandurah.jpg"
+        alt={`Magnified SMSF Specialists Premium Services in ${locationName}`}
+        class="rounded-xl shadow-xl w-full"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</SectionWrapper>
+
+<!-- Meet Your Strategic Partner -->
+<SectionWrapper bgColor="white">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="order-2 lg:order-1">
+      <div class="relative">
+        <img
+          src="/images/magda-betlem.jpg"
+          alt="Magda Betlem - Principal SMSF Specialist"
+          class="rounded-xl shadow-xl w-full max-w-md mx-auto object-cover"
+          loading="lazy"
+        />
+        <img
+          src="/images/smsf-accredited.png"
+          alt="SMSF Association Accredited Specialist"
+          class="absolute -bottom-4 -right-4 h-24 w-auto bg-white rounded-lg p-2 shadow-lg"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div class="order-1 lg:order-2">
+      <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Meet Your Strategic Partner</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">Magda Betlem</h2>
+      <p class="text-accent-500 font-semibold mb-6">Principal SMSF Specialist</p>
+      <p class="text-neutral-700 leading-relaxed">
+        With over 18 years of dedicated SMSF expertise, Magda Betlem (CPA) leads our specialist team with passion and integrity. As an Authorised Representative of the SMSF Advisers Network (SAN, AFSL 430062), she helps clients confidently manage their fund's compliance, solve complex SMSF challenges allowing trustees to benefit from the investment flexibility that SMSFs offer whilst ensuring your reporting obligations are met. Supporting clients across Mandurah, Perth, and regional WA, Magda and her team deliver the personal touch and technical depth that makes all the difference.
+      </p>
+    </div>
+  </div>
+</SectionWrapper>
+
+<!-- Services -->
+<ServicesGrid
+  title={`Our SMSF Services Tailored for ${locationName} Trustees`}
+  subtitle={servicesIntro}
+/>
+
+<!-- Is This You -->
+<SectionWrapper bgColor="light">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Is This You?</h2>
+    <p class="text-neutral-700 text-lg mb-6">{isThisYouIntro}</p>
+    <ul class="space-y-4 mb-8">
+      <li class="flex items-start gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span class="text-neutral-700">Are preparing for retirement, often aged 55 to 65</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span class="text-neutral-700">Hold a super balance of $600,000 or more</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span class="text-neutral-700">Earn a personal income of $150,000+ annually</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span class="text-neutral-700">Value tailored SMSF compliance support and investment strategy documentation</span>
+      </li>
+    </ul>
+    <p class="text-neutral-700">
+      If you're outside these ranges but value expert SMSF compliance services, we're still here to help.
+      <a href="/contact-us/" class="text-accent-500 font-semibold hover:underline ml-1">Book Now</a>
+    </p>
+  </div>
+</SectionWrapper>
+
+<!-- Why Trusts -->
+<SectionWrapper bgColor="white">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Why {locationName} Trusts Magnified SMSF Specialists</h2>
+    <p class="text-neutral-600 text-lg max-w-2xl mx-auto">{whyTrustsIntro}</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-neutral-50 rounded-xl p-8 shadow-sm">
+      <h3 class="text-xl font-bold text-primary-500 mb-3">Over 18 Years of Exclusive SMSF Expertise</h3>
+      <p class="text-neutral-600">Benefit from unmatched experience in Self-Managed Super Funds, ensuring expert guidance tailored to your needs.</p>
+    </div>
+    <div class="bg-neutral-50 rounded-xl p-8 shadow-sm">
+      <h3 class="text-xl font-bold text-primary-500 mb-3">Dedicated Local Support Team</h3>
+      <p class="text-neutral-600">{dedicatedSupportText}</p>
+    </div>
+    <div class="bg-neutral-50 rounded-xl p-8 shadow-sm">
+      <h3 class="text-xl font-bold text-primary-500 mb-3">Trusted by {locationName} Professionals</h3>
+      <p class="text-neutral-600">{trustedByText}</p>
+    </div>
+    <div class="bg-neutral-50 rounded-xl p-8 shadow-sm">
+      <h3 class="text-xl font-bold text-primary-500 mb-3">Award-Winning Service Excellence</h3>
+      <p class="text-neutral-600">Experience the difference with our award-winning solutions, designed to help you maximise your SMSF benefits.</p>
+    </div>
+  </div>
+</SectionWrapper>
+
+<!-- Values -->
+<ValuesSection />
+
+<!-- Reviews -->
+<ReviewsSection />
+
+<!-- How We Work -->
+<HowWeWorkSection />
+
+<!-- Contact -->
+<ContactSection
+  title={`Contact Your ${locationName} SMSF Experts Today`}
+  description={contactIntro}
+/>

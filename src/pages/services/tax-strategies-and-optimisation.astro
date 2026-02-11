@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServicePageLayout from '../../components/modules/ServicePageLayout.astro';
+import SectionWrapper from '../../components/ui/SectionWrapper.astro';
+---
+
+<Layout
+  title="SMSF Tax Strategies & Optimisation Mandurah"
+  description="Minimise SMSF tax and boost returns with Mandurah specialists. Smart strategies for pensions & capital gains keep more in your super -- book a consultation."
+>
+  <ServicePageLayout
+    heroTitle="Tax Strategies and Optimisation"
+    heroDescription="Unlock the full potential of your SMSF with tailored tax strategies designed to minimise obligations and maximise benefits. At Magnified SMSF Specialists, we understand the intricacies of SMSF taxation and work with you to optimise your fund's efficiency. From proactive tax planning to avoiding common mistakes, our expert guidance ensures your SMSF is structured for success."
+    servicesTitle="Key Tax Optimisation Services We Offer"
+    servicesIntro="Our specialised services are designed to enhance your SMSF's tax efficiency and overall performance:"
+    serviceCards={[
+      {
+        title: 'Proactive Tax Planning',
+        description: 'Strategies to reduce taxable income and make the most of superannuation concessions.',
+      },
+      {
+        title: 'Contribution Management',
+        description: 'Ensure contributions fully comply with all ATO caps and regulations. Proactive management avoids penalties, keeping your SMSF on track.',
+      },
+      {
+        title: 'Pension Phase Guidance',
+        description: 'Receive expert guidance to seamlessly transition into the tax-free pension phase, maximizing your retirement benefits effectively.',
+      },
+      {
+        title: 'Capital Gains Management',
+        description: 'Develop intelligent planning to minimise capital gains taxes on SMSF investments, preserving wealth for greater retirement security.',
+      },
+    ]}
+    ctaText="Ready to unlock greater tax efficiency for your SMSF?"
+    ctaButton="Discuss Your Tax Strategy"
+    whyChooseTitle="Benefits of Smart SMSF Tax Planning"
+    whyChooseIntro="Strategic SMSF tax optimisation is more than just compliance; it's about making your wealth work harder."
+    whyChooseCards={[
+      {
+        title: 'Strategic Tax Minimisation',
+        description: "Implement proven strategies to lower your SMSF's tax burden, keeping more of your funds invested.",
+      },
+      {
+        title: 'Proactive Tax Planning',
+        description: 'Stay ahead of regulatory changes and optimise your contributions and investment strategies.',
+      },
+      {
+        title: 'Avoid Costly Mistakes',
+        description: 'Eliminate risks such as exceeding contribution caps or misreporting income, ensuring compliance and saving you from penalties.',
+      },
+      {
+        title: 'Enhanced Fund Growth',
+        description: "Maximise your SMSF's performance with tax-efficient strategies that increase your long-term returns.",
+      },
+    ]}
+    faqs={[
+      {
+        question: 'What tax rates apply to an SMSF?',
+        answer: 'SMSFs in the accumulation phase pay a 15% tax rate, which drops to 0% during the pension phase if all conditions are met.',
+      },
+      {
+        question: 'Can SMSF expenses be tax-deductible?',
+        answer: 'Yes, expenses like administration fees, investment advice, and audit costs can often be claimed as deductions.',
+      },
+      {
+        question: 'How can I reduce taxes on my SMSF?',
+        answer: 'Strategies include salary sacrificing, managing contributions, and optimising investment structures. We tailor these to your specific needs.',
+      },
+    ]}
+    bottomCtaText="Don't let unnecessary taxes eat into your SMSF returns. Partner with Magnified SMSF Specialists to develop a tailored tax strategy that works for you, ensuring your retirement savings are maximized."
+    bottomCtaButton="Optimise Your SMSF Tax Strategies"
+  >
+    <!-- Extra Section: Common Mistakes -->
+    <SectionWrapper bgColor="light">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Common SMSF Tax Mistakes to Avoid</h2>
+        <p class="text-neutral-600 text-lg text-center mb-8">
+          Navigating SMSF taxation can be complex. Here are critical mistakes we help Perth and Mandurah SMSF trustees avoid:
+        </p>
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-accent-500">
+            <h3 class="text-lg font-bold text-primary-500 mb-2">Exceeding Contribution Caps</h3>
+            <p class="text-neutral-600">This can lead to hefty penalties. Our team ensures contributions are structured correctly.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-accent-500">
+            <h3 class="text-lg font-bold text-primary-500 mb-2">Incorrect Asset Segregation</h3>
+            <p class="text-neutral-600">Mismanaging investments between accumulation and pension phases can result in unnecessary taxes.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-accent-500">
+            <h3 class="text-lg font-bold text-primary-500 mb-2">Missed Deduction Opportunities</h3>
+            <p class="text-neutral-600">Many SMSF expenses qualify as tax deductions, and we ensure you claim them appropriately.</p>
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
+  </ServicePageLayout>
+</Layout>

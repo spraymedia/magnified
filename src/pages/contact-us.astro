@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionWrapper from '../components/ui/SectionWrapper.astro';
+import ContactSection from '../components/modules/ContactSection.astro';
+import { siteConfig } from '../config/site';
+---
+
+<Layout
+  title="Contact Magnified SMSF Specialists"
+  description="Get in touch with Perth & Mandurah's SMSF specialists. Call +61 (8) 9584 6677, email info@magnifiedsmsf.com.au, or visit Unit 2/106 Pinjarra Road, Mandurah WA 6210."
+>
+  <!-- Hero Stats Bar -->
+  <SectionWrapper bgColor="primary" padding="md">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+      <div class="p-4">
+        <h3 class="font-bold text-white text-lg">Over 18 Years of Specialist Experience</h3>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-white text-lg">Local, Dedicated Support Team</h3>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-white text-lg">Personalised, Proactive Client Care</h3>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-white text-lg">Valued by SMSF Trustees Across Western Australia</h3>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p class="text-primary-200 italic text-lg">
+        We act with Integrity, grow through Teamwork, spark Innovation, build Trust, and Empower people to thrive.
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- Contact Header -->
+  <SectionWrapper bgColor="white" padding="md">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Your Path To SMSF Clarity</h1>
+      <p class="text-neutral-700 text-lg leading-relaxed">
+        Ready to take confident control of your Self-Managed Super Fund (SMSF) journey? Whether you have a specific question, want to book a consultation, or are ready to partner with Perth's expert SMSF specialists, we're here to help.
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- Contact Form & Details -->
+  <ContactSection
+    title="Contact Magnified SMSF Specialists"
+    description="Our specialist team is here to provide expert guidance and support for your retirement journey."
+  />
+</Layout>

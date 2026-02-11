@@ -1,0 +1,157 @@
+---
+import { siteConfig } from '../../config/site';
+
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about/' },
+  {
+    label: 'Services',
+    href: '/services/',
+    children: siteConfig.services.map((s) => ({
+      label: s.title,
+      href: `/services/${s.slug}/`,
+    })),
+  },
+  { label: 'Contact', href: '/contact-us/' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm" id="main-nav">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0">
+        <img
+          src="/images/logo.png"
+          alt={siteConfig.name}
+          class="h-12 w-auto"
+          loading="eager"
+        />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Primary navigation">
+        {
+          navLinks.map((link) => (
+            <div class="relative group">
+              <a
+                href={link.href}
+                class:list={[
+                  'text-sm font-semibold tracking-wide uppercase transition-colors duration-200',
+                  currentPath === link.href || currentPath.startsWith(link.href.replace(/\/$/, '') + '/')
+                    ? 'text-accent-500'
+                    : 'text-primary-500 hover:text-accent-500',
+                ]}
+              >
+                {link.label}
+              </a>
+              {link.children && (
+                <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div class="bg-white rounded-lg shadow-xl border border-neutral-100 py-2 min-w-[320px]">
+                    {link.children.map((child) => (
+                      <a
+                        href={child.href}
+                        class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-500 transition-colors"
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))
+        }
+      </nav>
+
+      <!-- CTA + Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a
+          href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+          class="hidden sm:inline-flex items-center gap-2 bg-accent-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-accent-600 transition-colors shadow-md"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Call Now: {siteConfig.phone}
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-toggle"
+          class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-primary-500 hover:bg-neutral-100"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+        >
+          <svg id="menu-open-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-close-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-neutral-100 shadow-lg">
+    <div class="px-4 py-4 space-y-1">
+      {
+        navLinks.map((link) => (
+          <>
+            <a
+              href={link.href}
+              class:list={[
+                'block px-3 py-2.5 rounded-md text-sm font-semibold',
+                currentPath === link.href
+                  ? 'text-accent-500 bg-primary-50'
+                  : 'text-primary-500 hover:bg-neutral-50',
+              ]}
+            >
+              {link.label}
+            </a>
+            {link.children?.map((child) => (
+              <a
+                href={child.href}
+                class="block pl-8 pr-3 py-2 text-sm text-neutral-600 hover:bg-neutral-50 rounded-md"
+              >
+                {child.label}
+              </a>
+            ))}
+          </>
+        ))
+      }
+      <div class="pt-3 border-t border-neutral-100">
+        <a
+          href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+          class="block w-full text-center bg-accent-500 text-white px-5 py-3 rounded-lg font-semibold text-sm"
+        >
+          Call Now: {siteConfig.phone}
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-20"></div>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('menu-open-icon');
+    const closeIcon = document.getElementById('menu-close-icon');
+
+    toggle?.addEventListener('click', () => {
+      const isOpen = !menu?.classList.contains('hidden');
+      menu?.classList.toggle('hidden');
+      openIcon?.classList.toggle('hidden');
+      closeIcon?.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+</script>

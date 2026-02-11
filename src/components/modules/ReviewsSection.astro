@@ -1,0 +1,56 @@
+---
+import SectionWrapper from '../ui/SectionWrapper.astro';
+
+const testimonials = [
+  {
+    name: 'Bruce Hathway',
+    text: "We've been working with Magda for our SMSF services since May 2021, and the difference has been remarkable. Before partnering with her, we were using an online provider that was unable to support the complexity of our investment strategy. Magda brought a level of expertise and personalised service that gave us complete confidence in the management of our fund. She's knowledgeable, responsive, and a true pleasure to work with. We highly recommend Magda and the team at Magnified SMSF Specialists to anyone seeking trusted, professional SMSF advice.",
+    icon: '/images/icons/harvey-water.png',
+  },
+  {
+    name: 'Lynn Fowler',
+    text: 'I have been a client of Magda for many years. Magda and her team have always made me feel comfortable with my dealings with them. They have always been approachable with any queries that I have had. I have every trust that they will continue to look after my interests in the future. Looking forward working with Magda and her team for many more years',
+    icon: '/images/icons/icon-2.png',
+  },
+  {
+    name: 'Mahmood Hussein',
+    text: "Working with Magda and the team at Magnified has been an exceptional experience. Their depth of knowledge, particularly around complex matters like bringing my SMSF over from the UK, has been truly impressive. They've consistently gone above and beyond, providing expert guidance and proactive support at every step. What I value most is their integrity, professionalism, and genuine commitment to getting the best outcomes for their clients. I highly recommend Magnified to anyone looking for trusted SMSF advice and a team that genuinely cares.",
+    icon: '/images/icons/icon-1.png',
+  },
+  {
+    name: 'Nikki Rodda',
+    text: 'When my husband and I started setting up our superannuation funds, looking ahead to retirement, a wonderful young lady named Magda Betlem came into our lives. Over the many years since, Magda has truly been my rock. She provided all the available information, clearly explained the pros and cons of each option, and guided me in a way that allowed me to see the long-term and short-term benefits for myself. When my husband suddenly passed away seven years ago, Magda was there once again to guide and assist me every step of the way. She is the most honest and wonderful person. I have recommended her to others in the past and continue to do so. I would like to extend my heartfelt thanks to her once again.',
+    icon: '/images/icons/icon-3.png',
+  },
+];
+---
+
+<SectionWrapper bgColor="light" id="testimonials">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say About Us</h2>
+    <p class="text-neutral-600 text-lg max-w-2xl mx-auto">
+      The real story of Magnified SMSF Specialists is told by our clients.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {
+      testimonials.map((t) => (
+        <div class="bg-white rounded-xl p-8 shadow-md">
+          <div class="flex gap-1 mb-4">
+            {[...Array(5)].map(() => (
+              <svg class="h-5 w-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <p class="text-neutral-700 text-sm leading-relaxed mb-6 italic">"{t.text}"</p>
+          <div class="flex items-center gap-3">
+            <img src={t.icon} alt={t.name} class="h-10 w-10 rounded-full object-cover" loading="lazy" />
+            <span class="font-semibold text-primary-500">{t.name}</span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</SectionWrapper>

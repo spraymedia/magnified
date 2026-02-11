@@ -1,0 +1,49 @@
+---
+import SectionWrapper from '../ui/SectionWrapper.astro';
+
+const steps = [
+  {
+    number: '01',
+    title: 'Discovery Meeting',
+    description: 'Understand your SMSF goals and compliance needs.',
+  },
+  {
+    number: '02',
+    title: 'Fund Review & Plan',
+    description: "Outline a step-by-step approach to help you meet your fund's obligations.",
+  },
+  {
+    number: '03',
+    title: 'Implementation & Compliance',
+    description: 'Establish your fund and manage its operations efficiently.',
+  },
+  {
+    number: '04',
+    title: 'Ongoing Partnership',
+    description: 'Regular reviews and ongoing compliance support.',
+  },
+];
+---
+
+<SectionWrapper bgColor="white" id="how-we-work">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">How We Work Together</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {
+      steps.map((step, i) => (
+        <div class="text-center relative">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-500 text-primary-800 font-bold text-xl mb-4">
+            {step.number}
+          </div>
+          {i < steps.length - 1 && (
+            <div class="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-neutral-200" />
+          )}
+          <h3 class="text-lg font-bold text-primary-500 mb-2">{step.title}</h3>
+          <p class="text-neutral-600 text-sm">{step.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</SectionWrapper>

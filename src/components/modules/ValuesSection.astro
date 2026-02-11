@@ -1,0 +1,71 @@
+---
+import SectionWrapper from '../ui/SectionWrapper.astro';
+
+const values = [
+  {
+    title: 'Integrity',
+    description: "Acting in your fund's best interests, always.",
+    icon: 'shield',
+  },
+  {
+    title: 'Empowerment',
+    description: 'Helping you make informed, confident decisions as a trustee.',
+    icon: 'zap',
+  },
+  {
+    title: 'Innovation',
+    description:
+      'We embrace fresh ideas and smarter solutions to continually improve and create lasting value.',
+    icon: 'lightbulb',
+  },
+  {
+    title: 'Trust',
+    description:
+      "We earn confidence through reliability, ethical conduct, and putting our clients' interests first.",
+    icon: 'heart',
+  },
+  {
+    title: 'Teamwork',
+    description:
+      "Collaborating with you and your advisers for your fund's success.",
+    icon: 'users',
+  },
+];
+---
+
+<SectionWrapper bgColor="light" id="values">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Guided By Our Values</h2>
+    <p class="text-neutral-600 text-lg max-w-2xl mx-auto">
+      At the heart of Magnified SMSF Specialists are values that shape how we work:
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+    {
+      values.map((value) => (
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary-50 text-primary-500 mb-4">
+            {value.icon === 'shield' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+            )}
+            {value.icon === 'zap' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+            )}
+            {value.icon === 'lightbulb' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+            )}
+            {value.icon === 'heart' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            )}
+            {value.icon === 'users' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a8 8 0 0 0-16 0"></path><circle cx="10" cy="8" r="5"></circle><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></svg>
+            )}
+          </div>
+          <h3 class="text-lg font-bold text-primary-500 mb-2">{value.title}</h3>
+          <p class="text-neutral-600 text-sm">{value.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</SectionWrapper>

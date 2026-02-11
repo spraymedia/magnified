@@ -1,0 +1,167 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionWrapper from '../components/ui/SectionWrapper.astro';
+import Button from '../components/ui/Button.astro';
+import ValuesSection from '../components/modules/ValuesSection.astro';
+import ReviewsSection from '../components/modules/ReviewsSection.astro';
+import HowWeWorkSection from '../components/modules/HowWeWorkSection.astro';
+import ContactSection from '../components/modules/ContactSection.astro';
+import { siteConfig } from '../config/site';
+
+const team = [
+  {
+    name: 'Magda Betlem',
+    role: 'Principal SMSF Specialist',
+    image: '/images/team/magda.jpg',
+  },
+  {
+    name: 'Bianca Kulker',
+    role: 'SMSF Administrator',
+    image: '/images/team/bianca.jpg',
+  },
+  {
+    name: 'Milena Ribeiro',
+    role: 'SMSF Administrator',
+    image: '/images/team/milena.jpg',
+  },
+  {
+    name: 'Tania Magee',
+    role: 'Corporate Services & Administration',
+    image: '/images/team/tania.jpg',
+  },
+];
+---
+
+<Layout
+  title="About Our Mandurah SMSF Specialists"
+  description="Discover the values and 18+ years' SMSF expertise behind our Mandurah team. Integrity, teamwork and innovation shape the personalised support we deliver."
+>
+  <!-- Hero Stats Bar -->
+  <SectionWrapper bgColor="primary" padding="md">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+      <div class="p-4">
+        <h3 class="font-bold text-white text-lg">Over 18 Years of Specialist Experience</h3>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-white text-lg">Local, Dedicated Support Team</h3>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-white text-lg">Personalised, Proactive Client Care</h3>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-white text-lg">Valued by SMSF Trustees Across Western Australia</h3>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p class="text-primary-200 italic text-lg">
+        We act with Integrity, grow through Teamwork, spark Innovation, build Trust, and Empower people to thrive.
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- Main Introduction -->
+  <SectionWrapper bgColor="white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        Your Trusted Partner for Retirement Control in Perth & Mandurah
+      </h1>
+      <p class="text-neutral-700 text-lg leading-relaxed mb-8">
+        At Magnified SMSF Specialists, we believe your retirement journey should be a source of confidence, not complexity. With over 18 years of specialist SMSF expertise, we are dedicated to empowering successful Australians like you to take complete control of your Self-Managed Super Fund (SMSF). Our mission is to simplify the intricate world of superannuation, helping you make informed, confident decisions that secure your financial future right here in Perth, Mandurah, and Regional WA.
+      </p>
+      <p class="text-neutral-600 text-lg mb-8">
+        Ready to simplify your SMSF and take control of your retirement?
+      </p>
+      <Button href="/contact-us/" variant="primary" size="lg">
+        Book Your Free Discovery Session
+      </Button>
+    </div>
+  </SectionWrapper>
+
+  <!-- Hero Image -->
+  <SectionWrapper bgColor="light" padding="sm">
+    <div class="max-w-4xl mx-auto">
+      <img
+        src="/images/about-hero.jpg"
+        alt="Magnified SMSF Specialists Perth Mandurah team"
+        class="w-full rounded-xl shadow-xl"
+        loading="lazy"
+      />
+    </div>
+  </SectionWrapper>
+
+  <!-- Licensed Superannuation Advice -->
+  <SectionWrapper bgColor="white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">
+        Licensed Superannuation Advice &ndash; A True Point of Difference
+      </h2>
+      <p class="text-neutral-700 text-lg leading-relaxed mb-6">
+        At Magnified SMSF Specialists, we're proud to be authorised under the SMSF Adviser Network (SAN, AFSL 430062). This licence allows us to go beyond compliance and administration, offering specialist, licensed superannuation advice to help our clients make confident, strategic decisions for their future.
+      </p>
+      <p class="text-neutral-700 text-lg leading-relaxed mb-6">
+        Unlike many accounting firms that are limited to tax and compliance work, our AFSL accreditation means we can provide:
+      </p>
+      <ul class="space-y-4 mb-8">
+        <li class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+          <span class="text-neutral-700">Guidance tailored to your superannuation strategy and retirement goals</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+          <span class="text-neutral-700">Advice on contributions, pensions, and structuring your SMSF</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+          <span class="text-neutral-700">Clarity on complex rules and opportunities to ensure your fund is working for you</span>
+        </li>
+      </ul>
+      <p class="text-neutral-700 text-lg leading-relaxed">
+        Importantly, our AFSL is restricted to superannuation only. This ensures our focus remains on your SMSF and retirement outcomes, not on selling financial products. With licensed advice and specialist SMSF expertise, we provide a more comprehensive, trusted service so you can excel in building your future.
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- Team Section -->
+  <SectionWrapper bgColor="light">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">The Magnified SMSF Specialists Team</h2>
+      <p class="text-neutral-600 text-lg max-w-2xl mx-auto">
+        At the heart of Magnified SMSF Specialists is a team driven by passion, integrity, and a shared commitment to your SMSF success.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {
+        team.map((member) => (
+          <div class="bg-white rounded-xl overflow-hidden shadow-md text-center hover:shadow-lg transition-shadow">
+            <img
+              src={member.image}
+              alt={member.name}
+              class="w-full aspect-square object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-primary-500">{member.name}</h3>
+              <p class="text-neutral-600 text-sm">{member.role}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </SectionWrapper>
+
+  <!-- Values -->
+  <ValuesSection />
+
+  <!-- Reviews -->
+  <ReviewsSection />
+
+  <!-- How We Work -->
+  <HowWeWorkSection />
+
+  <!-- Contact / CTA -->
+  <ContactSection
+    title="Ready to Elevate Your SMSF Journey?"
+    description="Discover how Magnified SMSF Specialists can provide the clarity, confidence, and expert support you need for your Self-Managed Super Fund."
+  />
+</Layout>

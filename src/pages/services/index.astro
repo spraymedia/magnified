@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionWrapper from '../../components/ui/SectionWrapper.astro';
+import Button from '../../components/ui/Button.astro';
+import ServicesGrid from '../../components/modules/ServicesGrid.astro';
+import HowWeWorkSection from '../../components/modules/HowWeWorkSection.astro';
+import ContactSection from '../../components/modules/ContactSection.astro';
+import { siteConfig } from '../../config/site';
+---
+
+<Layout
+  title="Our Expert SMSF Services"
+  description="Comprehensive SMSF services in Perth & Mandurah. SMSF setup, financial reporting, tax strategies, and strategic compliance from 18+ years of specialist experience."
+>
+  <!-- Hero -->
+  <section class="bg-primary-500 text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Our Expert SMSF Services</h1>
+        <p class="text-lg text-primary-100 leading-relaxed">
+          Taking control of your Self-Managed Super Fund (SMSF) is a powerful step towards a secure retirement. At Magnified SMSF Specialists, we offer a comprehensive suite of SMSF services designed to simplify complexity, ensure ATO compliance, and empower you to confidently manage your superannuation wealth. Serving Perth, Mandurah, and clients across Western Australia, we're your local experts dedicated to maximizing your financial future.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <ServicesGrid
+    title="Our Comprehensive SMSF Solutions"
+    subtitle="Discover the specialised areas where our 18+ years of SMSF expertise, led by Principal Magda Betlem, make all the difference. Each service is designed to provide clarity, confidence, and control over your fund."
+  />
+
+  <!-- Trust / Advantage Section -->
+  <SectionWrapper bgColor="light">
+    <div class="text-center mb-12">
+      <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Trusted by Perth's Professionals</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">The Magnified SMSF Advantage: Your Local Expert Partner</h2>
+      <p class="text-neutral-600 text-lg max-w-2xl mx-auto">
+        Choosing Magnified SMSF Specialists means partnering with a team that truly understands your needs and the local market.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl p-8 shadow-sm">
+        <div class="text-accent-500 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary-500 mb-3">18+ Years of Specialist Experience</h3>
+        <p class="text-neutral-600">
+          Benefit from unparalleled expertise and practical guidance in Self-Managed Super Funds.
+        </p>
+      </div>
+      <div class="bg-white rounded-xl p-8 shadow-sm">
+        <div class="text-accent-500 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a8 8 0 0 0-16 0"></path><circle cx="10" cy="8" r="5"></circle><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary-500 mb-3">Local, Dedicated Support Team</h3>
+        <p class="text-neutral-600">
+          Enjoy personalised, proactive client care from our SMSF experts, valued by trustees across Western Australia.
+        </p>
+      </div>
+      <div class="bg-white rounded-xl p-8 shadow-sm">
+        <div class="text-accent-500 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary-500 mb-3">Holistic, Client-Centric Approach</h3>
+        <p class="text-neutral-600">
+          We simplify complexity, offering comprehensive solutions tailored to your unique circumstances and aspirations.
+        </p>
+      </div>
+      <div class="bg-white rounded-xl p-8 shadow-sm">
+        <div class="text-accent-500 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary-500 mb-3">Blend of Expertise & Technology</h3>
+        <p class="text-neutral-600">
+          Access our deep technical knowledge combined with the empowering Class Super client portal for real-time insights and control.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- How We Work -->
+  <HowWeWorkSection />
+
+  <!-- CTA -->
+  <ContactSection
+    title="Ready to Take Control of Your Retirement?"
+    description="Don't let the complexities of SMSF management hold you back. Magnified SMSF Specialists is here to provide the clarity, confidence, and expert support you need to secure your financial future."
+  />
+</Layout>
