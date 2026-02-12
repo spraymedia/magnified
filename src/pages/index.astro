@@ -215,64 +215,85 @@ import { siteConfig } from '../config/site';
     </div>
   </SectionWrapper>
 
-  <!-- Local Expertise -->
-  <SectionWrapper bgColor="white">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <!-- Local Expertise & Technology -->
+  <SectionWrapper bgColor="light">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-center">
+      <!-- Left: Local Expertise -->
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Local Expertise, Premium Services in Perth & Mandurah</h2>
-        <p class="text-neutral-700 text-lg mb-6">
-          Conveniently located in Mandurah, we provide premium SMSF services to clients throughout the Perth metropolitan area. Our strategic location allows us to offer:
-        </p>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-500 flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-            <span class="text-neutral-700">Face-to-face consultations</span>
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Our Locations</p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Local Expertise, Premium Services in Perth & Mandurah</h2>
+        <div class="border-l-4 border-accent-500 pl-5 mb-6">
+          <p class="text-neutral-700 leading-relaxed">
+            Conveniently located in Mandurah, we provide premium SMSF services to clients throughout the Perth metropolitan area. Our strategic location allows us to offer:
+          </p>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3">
+            <span class="bg-accent-50 rounded-full p-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+            <span class="text-neutral-700 font-medium">Face-to-face consultations</span>
           </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-500 flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-            <span class="text-neutral-700">Flexible meeting arrangements</span>
+          <li class="flex items-center gap-3">
+            <span class="bg-accent-50 rounded-full p-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+            <span class="text-neutral-700 font-medium">Flexible meeting arrangements</span>
           </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-500 flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-            <span class="text-neutral-700">Personalised Service Delivery</span>
+          <li class="flex items-center gap-3">
+            <span class="bg-accent-50 rounded-full p-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+            <span class="text-neutral-700 font-medium">Personalised Service Delivery</span>
           </li>
         </ul>
       </div>
-      <div>
+
+      <!-- Center: Image -->
+      <div class="flex justify-center">
         <img
           src="/images/perth-mandurah.jpg"
           alt="Magnified SMSF Specialists Premium Services in Perth and Mandurah"
-          class="rounded-xl shadow-xl w-full"
+          class="rounded-2xl shadow-2xl w-full max-h-[500px] object-cover ring-1 ring-neutral-200"
           loading="lazy"
         />
       </div>
-    </div>
-  </SectionWrapper>
 
-  <!-- Technology Section -->
-  <SectionWrapper bgColor="light">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Technology That Empowers You: The Class Super Portal</h2>
-      <p class="text-neutral-700 text-lg mb-8">
-        Access your SMSF information anytime, anywhere through our state-of-the-art Class Super portal:
-      </p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"></line><line x1="18" x2="18" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="16"></line></svg>
-          <h3 class="font-bold text-primary-500 mb-1">Regular balance updates</h3>
+      <!-- Right: Technology -->
+      <div>
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Your Portal</p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Technology That Empowers You: The Class Super Portal</h2>
+        <div class="border-l-4 border-accent-500 pl-5 mb-6">
+          <p class="text-neutral-700 leading-relaxed">
+            Access your SMSF information anytime, anywhere through our state-of-the-art Class Super portal:
+          </p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
-          <h3 class="font-bold text-primary-500 mb-1">Performance tracking</h3>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
-          <h3 class="font-bold text-primary-500 mb-1">Document management</h3>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
-          <h3 class="font-bold text-primary-500 mb-1">Secure communication platform</h3>
-        </div>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3">
+            <span class="bg-accent-50 rounded-full p-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+            <span class="text-neutral-700 font-medium">Regular balance updates</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="bg-accent-50 rounded-full p-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+            <span class="text-neutral-700 font-medium">Performance tracking</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="bg-accent-50 rounded-full p-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+            <span class="text-neutral-700 font-medium">Document management</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="bg-accent-50 rounded-full p-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+            <span class="text-neutral-700 font-medium">Secure communication platform</span>
+          </li>
+        </ul>
       </div>
     </div>
   </SectionWrapper>
