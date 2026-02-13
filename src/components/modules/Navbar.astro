@@ -54,11 +54,11 @@ const navLinks = [
               </a>
               {link.children && (
                 <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div class="bg-white rounded-lg shadow-xl border border-neutral-100 py-2 min-w-[320px]">
+                  <div class="bg-white rounded-xl shadow-xl border border-neutral-100 py-3 min-w-[320px]">
                     {link.children.map((child) => (
                       <a
                         href={child.href}
-                        class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-500 transition-colors"
+                        class="block px-4 py-3 text-sm text-neutral-700 border-l-3 border-transparent hover:border-accent-500 hover:bg-accent-500/5 hover:text-accent-500 hover:pl-6 transition-all duration-200"
                       >
                         {child.label}
                       </a>
