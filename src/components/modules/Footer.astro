@@ -10,7 +10,7 @@ import { siteConfig } from '../../config/site';
         <img
           src="/images/logo.png"
           alt="Magnified SMSF Specialists"
-          class="h-16 w-auto mb-6 brightness-0 invert"
+          class="h-24 w-auto mb-6 brightness-0 invert"
           loading="lazy"
         />
         <ul class="space-y-3 text-sm text-primary-200">
@@ -31,9 +31,6 @@ import { siteConfig } from '../../config/site';
             <span>{siteConfig.address.full}</span>
           </li>
         </ul>
-        <p class="text-xs text-primary-300 mt-6 leading-relaxed">
-          Magnified SMSF Specialists is an Authorised Representative of SMSF Advisers Network Pty Ltd (SAN), AFSL No. {siteConfig.afsl}.
-        </p>
       </div>
 
       <!-- Column 2: Service Areas -->
@@ -106,7 +103,7 @@ import { siteConfig } from '../../config/site';
           <img
             src="/images/cpa-badge.png"
             alt="CPA Practice"
-            class="h-16 w-auto mx-auto mb-2"
+            class="h-24 w-auto mx-auto mb-2"
             loading="lazy"
           />
           <p class="text-xs text-primary-300">Magnified SMSF Specialists is a CPA Practice</p>
@@ -118,9 +115,12 @@ import { siteConfig } from '../../config/site';
   <!-- Bottom Bar -->
   <div class="border-t border-primary-400">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-      <p class="text-center text-xs text-primary-300">
-        &copy; {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.
-      </p>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-300">
+        <p>
+          Magnified SMSF Specialists is an Authorised Representative of SMSF Advisers Network Pty Ltd (SAN), AFSL No. {siteConfig.afsl}.
+        </p>
+        <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.</p>
+      </div>
     </div>
   </div>
 </footer>
