@@ -74,24 +74,25 @@ import SectionWrapper from '../../components/ui/SectionWrapper.astro';
   >
     <!-- Extra Section: Common Mistakes -->
     <SectionWrapper bgColor="light">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Common SMSF Tax Mistakes to Avoid</h2>
-        <p class="text-neutral-600 text-lg text-center mb-8">
+      <div class="text-center mb-12 animate-on-scroll">
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Watch Out For</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Common SMSF Tax Mistakes to Avoid</h2>
+        <p class="text-neutral-600 text-lg max-w-3xl mx-auto">
           Navigating SMSF taxation can be complex. Here are critical mistakes we help Perth and Mandurah SMSF trustees avoid:
         </p>
-        <div class="space-y-6">
-          <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-accent-500">
-            <h3 class="text-lg font-bold text-primary-500 mb-2">Exceeding Contribution Caps</h3>
-            <p class="text-neutral-600">This can lead to hefty penalties. Our team ensures contributions are structured correctly.</p>
-          </div>
-          <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-accent-500">
-            <h3 class="text-lg font-bold text-primary-500 mb-2">Incorrect Asset Segregation</h3>
-            <p class="text-neutral-600">Mismanaging investments between accumulation and pension phases can result in unnecessary taxes.</p>
-          </div>
-          <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-accent-500">
-            <h3 class="text-lg font-bold text-primary-500 mb-2">Missed Deduction Opportunities</h3>
-            <p class="text-neutral-600">Many SMSF expenses qualify as tax deductions, and we ensure you claim them appropriately.</p>
-          </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 border-t-4 border-accent-500 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 animate-on-scroll">
+          <h3 class="text-lg font-bold text-primary-500 mb-2">Exceeding Contribution Caps</h3>
+          <p class="text-neutral-600">This can lead to hefty penalties. Our team ensures contributions are structured correctly.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border-t-4 border-accent-500 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 animate-on-scroll delay-100">
+          <h3 class="text-lg font-bold text-primary-500 mb-2">Incorrect Asset Segregation</h3>
+          <p class="text-neutral-600">Mismanaging investments between accumulation and pension phases can result in unnecessary taxes.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border-t-4 border-accent-500 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 animate-on-scroll delay-200">
+          <h3 class="text-lg font-bold text-primary-500 mb-2">Missed Deduction Opportunities</h3>
+          <p class="text-neutral-600">Many SMSF expenses qualify as tax deductions, and we ensure you claim them appropriately.</p>
         </div>
       </div>
     </SectionWrapper>
