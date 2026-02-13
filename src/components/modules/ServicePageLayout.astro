@@ -22,6 +22,7 @@ interface WhyChooseCard {
 
 interface Props {
   heroTitle: string;
+  heroTitleAccent?: string;
   heroDescription: string;
   heroImage?: string;
   servicesTitle: string;
@@ -40,6 +41,7 @@ interface Props {
 
 const {
   heroTitle,
+  heroTitleAccent,
   heroDescription,
   heroImage,
   servicesTitle,
@@ -86,7 +88,9 @@ const faqSchema = {
   </div>
   <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
     <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-500">{heroTitle}</h1>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-500">
+        {heroTitle}{heroTitleAccent && <> <span class="text-accent-500">{heroTitleAccent}</span></>}
+      </h1>
     </div>
   </div>
 </section>
