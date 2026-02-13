@@ -34,7 +34,7 @@ const steps = [
     {
       steps.map((step, i) => (
         <div class:list={['text-center relative animate-on-scroll', i > 0 && `delay-${i * 100}`]}>
-          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-500 text-primary-800 font-bold text-xl mb-4">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-500 text-white font-bold text-xl mb-4">
             {step.number}
           </div>
           {i < steps.length - 1 && (
