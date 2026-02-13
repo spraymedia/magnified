@@ -49,21 +49,27 @@ import { siteConfig } from '../config/site';
 
   <!-- Expert SMSF Management -->
   <SectionWrapper bgColor="light">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Expert SMSF Management with Magnified SMSF Specialists</h2>
-        <p class="text-neutral-700 text-lg leading-relaxed mb-6">
-          Managing your super shouldn't feel overwhelming. We work closely with you to navigate your SMSF compliance obligations and administrative needs. Whether you're setting up an SMSF or maintaining your fund's records, we're here to help you meet your trustee responsibilities with clarity.
-        </p>
-        <Button href="/contact-us/" variant="primary" size="md">
-          Book Now
-        </Button>
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2 animate-on-scroll">Our Expertise</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 animate-on-scroll delay-100">Expert SMSF Management with Magnified SMSF Specialists</h2>
+        <div class="border-l-4 border-accent-500 pl-5 mb-6 animate-on-scroll delay-200">
+          <p class="text-neutral-700 text-lg leading-relaxed">
+            Managing your super shouldn't feel overwhelming. We work closely with you to navigate your SMSF compliance obligations and administrative needs. Whether you're setting up an SMSF or maintaining your fund's records, we're here to help you meet your trustee responsibilities with clarity.
+          </p>
+        </div>
+        <div class="animate-on-scroll delay-300">
+          <Button href="/contact-us/" variant="primary" size="md">
+            Book Now
+          </Button>
+        </div>
       </div>
-      <div class="relative">
+      <div class="relative animate-on-scroll delay-200">
+        <div class="absolute -top-4 -right-4 w-full h-full rounded-2xl bg-accent-500/10 hidden lg:block"></div>
         <img
           src="/images/expert-smsf.jpg"
           alt="Expert SMSF Management with Magnified SMSF Specialists"
-          class="rounded-xl shadow-xl w-full max-h-[500px] object-cover"
+          class="relative rounded-2xl shadow-2xl ring-1 ring-neutral-200 w-full max-h-[500px] object-cover"
           loading="lazy"
         />
       </div>
@@ -72,28 +78,27 @@ import { siteConfig } from '../config/site';
 
   <!-- Meet Your Strategic Partner -->
   <SectionWrapper bgColor="white">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="order-2 lg:order-1">
-        <div class="relative">
-          <img
-            src="/images/magda-betlem.jpg"
-            alt="Magda Betlem - Principal SMSF Specialist"
-            class="rounded-xl shadow-xl w-full max-h-[500px] object-cover"
-            loading="lazy"
-          />
-          <img
-            src="/images/smsf-accredited.png"
-            alt="SMSF Association Accredited Specialist"
-            class="absolute -bottom-4 -right-4 h-24 w-auto bg-white rounded-lg p-2 shadow-lg"
-            loading="lazy"
-          />
-        </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="order-2 lg:order-1 relative animate-on-scroll delay-200">
+        <div class="absolute -top-4 -left-4 w-full h-full rounded-2xl bg-accent-500/10 hidden lg:block"></div>
+        <img
+          src="/images/magda-betlem.jpg"
+          alt="Magda Betlem - Principal SMSF Specialist"
+          class="relative rounded-2xl shadow-2xl ring-1 ring-neutral-200 w-full max-h-[500px] object-cover"
+          loading="lazy"
+        />
+        <img
+          src="/images/smsf-accredited.png"
+          alt="SMSF Association Accredited Specialist"
+          class="absolute -bottom-4 -right-4 h-24 w-auto bg-white rounded-lg p-2 shadow-lg z-10"
+          loading="lazy"
+        />
       </div>
       <div class="order-1 lg:order-2">
-        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Meet Your Strategic Partner</p>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Magda Betlem</h2>
-        <p class="text-accent-500 font-semibold mb-6">Principal SMSF Specialist</p>
-        <p class="text-neutral-700 leading-relaxed">
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2 animate-on-scroll">Meet Your Strategic Partner</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll delay-100">Magda Betlem</h2>
+        <p class="text-accent-500 font-semibold mb-6 animate-on-scroll delay-100">Principal SMSF Specialist</p>
+        <p class="text-neutral-700 leading-relaxed animate-on-scroll delay-200">
           With over 18 years of dedicated SMSF expertise, Magda Betlem (CPA) leads our specialist team with passion and integrity. As an Authorised Representative of the SMSF Advisers Network (SAN, AFSL 430062), she helps clients confidently manage their fund's compliance, solve complex SMSF challenges allowing trustees to benefit from the investment flexibility that SMSFs offer whilst ensuring your reporting obligations are met. Supporting clients across Mandurah, Perth, and regional WA, Magda and her team deliver the personal touch and technical depth that makes all the difference.
         </p>
       </div>
@@ -107,12 +112,12 @@ import { siteConfig } from '../config/site';
   <SectionWrapper bgColor="accent">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div>
-        <p class="text-white/80 font-semibold text-sm uppercase tracking-wide mb-2">Find Your Fit</p>
-        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Is This You?</h2>
-        <p class="text-white/90 text-lg mb-6">
+        <p class="text-white/80 font-semibold text-sm uppercase tracking-wide mb-2 animate-on-scroll">Find Your Fit</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white animate-on-scroll delay-100">Is This You?</h2>
+        <p class="text-white/90 text-lg mb-6 animate-on-scroll delay-200">
           At Magnified SMSF Specialists, we help SMSF trustees and future trustees who want clarity and confidence managing their super. Our services are ideally suited for individuals who:
         </p>
-        <ul class="space-y-4 mb-8">
+        <ul class="space-y-4 mb-8 animate-on-scroll delay-300">
           <li class="flex items-start gap-3 pl-4 border-l-2 border-white/50">
             <span class="text-white/90">Are preparing for retirement, often aged 55 to 65</span>
           </li>
@@ -133,7 +138,7 @@ import { siteConfig } from '../config/site';
           Book Now
         </Button>
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-2 gap-4 animate-on-scroll delay-200">
         <div class="rounded-xl overflow-hidden shadow-lg">
           <img src="/images/hero-1.jpg" alt="SMSF Specialist consultation" class="w-full h-full object-cover aspect-square" loading="lazy" />
         </div>
@@ -152,8 +157,8 @@ import { siteConfig } from '../config/site';
 
   <!-- Why Choose Us -->
   <SectionWrapper bgColor="light">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="relative animate-on-scroll delay-200">
         <img
           src="/images/team-group.jpg"
           alt="Magnified SMSF Specialists Team"
@@ -165,20 +170,24 @@ import { siteConfig } from '../config/site';
         </div>
       </div>
       <div>
-        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Our Promise</p>
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">Why Choose Magnified SMSF Specialists?</h2>
-        <p class="text-neutral-700 text-lg leading-relaxed mb-6">
-          Choosing the right partner for your SMSF makes all the difference. At Magnified SMSF Specialists, our commitment extends beyond numbers; we prioritise proactive compliance management to ensure your SMSF remains ATO-compliant and stress-free.
-        </p>
-        <p class="text-neutral-700 text-lg leading-relaxed mb-6">
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2 animate-on-scroll">Our Promise</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 animate-on-scroll delay-100">Why Choose Magnified SMSF Specialists?</h2>
+        <div class="border-l-4 border-accent-500 pl-5 mb-6 animate-on-scroll delay-200">
+          <p class="text-neutral-700 text-lg leading-relaxed">
+            Choosing the right partner for your SMSF makes all the difference. At Magnified SMSF Specialists, our commitment extends beyond numbers; we prioritise proactive compliance management to ensure your SMSF remains ATO-compliant and stress-free.
+          </p>
+        </div>
+        <p class="text-neutral-700 text-lg leading-relaxed mb-6 animate-on-scroll delay-300">
           Our approach is uniquely focused on providing strategic investment guidance, integrating estate planning, and maximising tax efficiency through regular quarterly reviews. We believe in unparalleled service and support, offering direct access to senior specialists and ongoing trustee education.
         </p>
-        <p class="text-neutral-700 text-lg leading-relaxed mb-8">
+        <p class="text-neutral-700 text-lg leading-relaxed mb-8 animate-on-scroll delay-300">
           This holistic methodology, combined with our local presence and empowering technology, ensures your journey to retirement is managed with confidence and optimised for success.
         </p>
-        <Button href="/contact-us/" variant="primary" size="lg">
-          Book Your Free Discovery Session
-        </Button>
+        <div class="animate-on-scroll delay-400">
+          <Button href="/contact-us/" variant="primary" size="lg">
+            Book Your Free Discovery Session
+          </Button>
+        </div>
       </div>
     </div>
   </SectionWrapper>
@@ -187,7 +196,7 @@ import { siteConfig } from '../config/site';
   <SectionWrapper bgColor="white">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-center">
       <!-- Left: Local Expertise -->
-      <div>
+      <div class="animate-on-scroll">
         <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Our Locations</p>
         <h2 class="text-2xl md:text-3xl font-bold mb-4">Local Expertise, Premium Services in Perth & Mandurah</h2>
         <div class="border-l-4 border-accent-500 pl-5 mb-6">
@@ -218,7 +227,7 @@ import { siteConfig } from '../config/site';
       </div>
 
       <!-- Center: Image -->
-      <div class="flex justify-center">
+      <div class="flex justify-center animate-on-scroll delay-200">
         <img
           src="/images/perth-mandurah.jpg"
           alt="Magnified SMSF Specialists Premium Services in Perth and Mandurah"
@@ -228,7 +237,7 @@ import { siteConfig } from '../config/site';
       </div>
 
       <!-- Right: Technology -->
-      <div>
+      <div class="animate-on-scroll delay-400">
         <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Your Portal</p>
         <h2 class="text-2xl md:text-3xl font-bold mb-4">Technology That Empowers You: The Class Super Portal</h2>
         <div class="border-l-4 border-accent-500 pl-5 mb-6">
