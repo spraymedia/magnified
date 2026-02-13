@@ -55,7 +55,7 @@ export const siteConfig: SiteConfig = {
   phoneFormatted: '08 9584 6677',
   email: 'info@magnifiedsmsf.com.au',
   social: {
-    facebook: 'https://www.facebook.com/magnifiedsmsf',
+    facebook: 'https://www.facebook.com/profile.php?id=61578271446627',
   },
   hours: {
     weekdays: '8:30 AM - 5:00 PM',
