@@ -106,23 +106,28 @@ const faqSchema = {
 
 <!-- Service Cards -->
 <SectionWrapper bgColor="white">
-  <div class="text-center mb-12">
+  <div class="text-center mb-12 animate-on-scroll">
+    <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">What We Offer</p>
     <h2 class="text-3xl md:text-4xl font-bold mb-4">{servicesTitle}</h2>
     {servicesIntro && <p class="text-neutral-600 text-lg max-w-3xl mx-auto">{servicesIntro}</p>}
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {
-      serviceCards.map((card) => (
-        <div class="bg-neutral-50 rounded-xl p-8 border border-neutral-100 hover:shadow-md transition-shadow">
-          <h3 class="text-xl font-bold text-primary-500 mb-3">{card.title}</h3>
-          <p class="text-neutral-600 leading-relaxed">{card.description}</p>
+      serviceCards.map((card, i) => (
+        <div class:list={['animate-on-scroll', i > 0 && `delay-${i * 100}`]}>
+          <div class="bg-white rounded-xl p-8 border-l-4 border-accent-500 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 h-full">
+            <h3 class="text-xl font-bold text-primary-500 mb-3">{card.title}</h3>
+            <p class="text-neutral-600 leading-relaxed">{card.description}</p>
+          </div>
         </div>
       ))
     }
   </div>
-  <div class="text-center mt-10">
-    <p class="text-neutral-700 text-lg mb-4">{ctaText}</p>
-    <Button href="/contact-us/" variant="primary" size="lg">{ctaButton}</Button>
+  <div class="text-center mt-10 animate-on-scroll delay-400">
+    <div class="border-t border-neutral-200 pt-8">
+      <p class="text-neutral-700 text-lg mb-4">{ctaText}</p>
+      <Button href="/contact-us/" variant="primary" size="lg">{ctaButton}</Button>
+    </div>
   </div>
 </SectionWrapper>
 
@@ -233,7 +238,7 @@ const faqSchema = {
 <ReviewsSection />
 
 <!-- Trust Badges -->
-<StatsBar bgColor="white" showTagline={false} showIcons={false} />
+<StatsBar bgColor="accent" showTagline={false} showIcons={false} />
 
 <!-- Contact -->
 <ContactSection />
