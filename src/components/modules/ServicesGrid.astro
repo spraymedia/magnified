@@ -26,7 +26,8 @@ const serviceIcons = [
 ---
 
 <SectionWrapper bgColor="light" id="services">
-  <div class="text-center mb-12">
+  <div class="text-center mb-12 animate-on-scroll">
+    <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Our Solutions</p>
     <h2 class="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
     {subtitle && <p class="text-neutral-600 text-lg max-w-3xl mx-auto">{subtitle}</p>}
   </div>
@@ -34,15 +35,17 @@ const serviceIcons = [
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {
       siteConfig.services.map((service, i) => (
-        <Card href={`/services/${service.slug}/`} class="p-8">
-          <div class="text-primary-500 mb-4" set:html={serviceIcons[i]} />
-          <h3 class="text-xl font-bold text-primary-500 mb-3">{service.title}</h3>
-          <p class="text-neutral-600 text-sm leading-relaxed mb-4">{service.description}</p>
-          <span class="inline-flex items-center gap-1 text-accent-500 font-semibold text-sm group-hover:gap-2 transition-all">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </span>
-        </Card>
+        <div class:list={['animate-on-scroll', i > 0 && `delay-${i * 100}`]}>
+          <Card href={`/services/${service.slug}/`} class="p-8 h-full hover:-translate-y-1 transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-accent-500/10 text-accent-500 mb-4" set:html={serviceIcons[i]} />
+            <h3 class="text-xl font-bold text-primary-500 mb-3">{service.title}</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed mb-4">{service.description}</p>
+            <span class="inline-flex items-center gap-1 text-accent-500 font-semibold text-sm group-hover:gap-2 transition-all">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </span>
+          </Card>
+        </div>
       ))
     }
   </div>
