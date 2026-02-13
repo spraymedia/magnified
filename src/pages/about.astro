@@ -128,34 +128,73 @@ const team = [
   </SectionWrapper>
 
   <!-- Licensed Superannuation Advice -->
-  <SectionWrapper bgColor="white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">
-        Licensed Superannuation Advice &ndash; A True Point of Difference
-      </h2>
-      <p class="text-neutral-700 text-lg leading-relaxed mb-6">
-        At Magnified SMSF Specialists, we're proud to be authorised under the SMSF Adviser Network (SAN, AFSL 430062). This licence allows us to go beyond compliance and administration, offering specialist, licensed superannuation advice to help our clients make confident, strategic decisions for their future.
-      </p>
-      <p class="text-neutral-700 text-lg leading-relaxed mb-6">
-        Unlike many accounting firms that are limited to tax and compliance work, our AFSL accreditation means we can provide:
-      </p>
-      <ul class="space-y-4 mb-8">
-        <li class="flex items-start gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-          <span class="text-neutral-700">Guidance tailored to your superannuation strategy and retirement goals</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-          <span class="text-neutral-700">Advice on contributions, pensions, and structuring your SMSF</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-          <span class="text-neutral-700">Clarity on complex rules and opportunities to ensure your fund is working for you</span>
-        </li>
-      </ul>
-      <p class="text-neutral-700 text-lg leading-relaxed">
-        Importantly, our AFSL is restricted to superannuation only. This ensures our focus remains on your SMSF and retirement outcomes, not on selling financial products. With licensed advice and specialist SMSF expertise, we provide a more comprehensive, trusted service so you can excel in building your future.
-      </p>
+  <SectionWrapper bgColor="light">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left: Image with Overlapping Accreditation Card -->
+      <div class="relative order-2 lg:order-1 animate-on-scroll delay-200">
+        <!-- Decorative accent shape behind image -->
+        <div class="absolute -top-4 -left-4 w-full h-full rounded-2xl bg-accent-500/10 hidden lg:block"></div>
+
+        <!-- Main image -->
+        <img
+          src="/images/about-hero.jpg"
+          alt="Magda Betlem - Licensed SMSF Specialist"
+          class="relative w-full rounded-2xl shadow-2xl ring-1 ring-neutral-200 max-h-[550px] object-cover"
+          loading="lazy"
+        />
+
+        <!-- Overlapping accreditation card -->
+        <div class="absolute -bottom-6 left-8 lg:left-12 -right-4 bg-accent-500 rounded-xl p-5 shadow-xl">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white/60 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+            <div>
+              <p class="text-white font-semibold text-sm">AFSL 430062</p>
+              <p class="text-white/80 text-sm">Restricted to Superannuation Only</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom spacer for overlapping card -->
+        <div class="h-10"></div>
+      </div>
+
+      <!-- Right: Text Content -->
+      <div class="order-1 lg:order-2">
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2 animate-on-scroll">Our Difference</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 animate-on-scroll delay-100">
+          Licensed Superannuation Advice &ndash; A True Point of Difference
+        </h2>
+
+        <!-- Lead paragraph with accent left border -->
+        <div class="border-l-4 border-accent-500 pl-5 mb-6 animate-on-scroll delay-200">
+          <p class="text-neutral-700 text-lg leading-relaxed">
+            At Magnified SMSF Specialists, we're proud to be authorised under the SMSF Adviser Network (SAN, AFSL 430062). This licence allows us to go beyond compliance and administration, offering specialist, licensed superannuation advice to help our clients make confident, strategic decisions for their future.
+          </p>
+        </div>
+
+        <p class="text-neutral-700 text-lg leading-relaxed mb-6 animate-on-scroll delay-300">
+          Unlike many accounting firms that are limited to tax and compliance work, our AFSL accreditation means we can provide:
+        </p>
+
+        <ul class="space-y-3 mb-8 animate-on-scroll delay-300">
+          <li class="flex items-start gap-3 pl-4 border-l-2 border-accent-500/40">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Guidance tailored to your superannuation strategy and retirement goals</span>
+          </li>
+          <li class="flex items-start gap-3 pl-4 border-l-2 border-accent-500/40">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Advice on contributions, pensions, and structuring your SMSF</span>
+          </li>
+          <li class="flex items-start gap-3 pl-4 border-l-2 border-accent-500/40">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span class="text-neutral-700">Clarity on complex rules and opportunities to ensure your fund is working for you</span>
+          </li>
+        </ul>
+
+        <p class="text-neutral-700 text-lg leading-relaxed animate-on-scroll delay-400">
+          Importantly, our AFSL is restricted to superannuation only. This ensures our focus remains on your SMSF and retirement outcomes, not on selling financial products. With licensed advice and specialist SMSF expertise, we provide a more comprehensive, trusted service so you can excel in building your future.
+        </p>
+      </div>
     </div>
   </SectionWrapper>
 
