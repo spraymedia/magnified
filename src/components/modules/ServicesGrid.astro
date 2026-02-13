@@ -6,11 +6,13 @@ import { siteConfig } from '../../config/site';
 interface Props {
   title?: string;
   subtitle?: string;
+  bgColor?: 'white' | 'light' | 'dark' | 'primary' | 'accent';
 }
 
 const {
   title = 'Our Comprehensive SMSF Solutions',
   subtitle,
+  bgColor = 'light',
 } = Astro.props;
 
 const serviceIcons = [
@@ -25,7 +27,7 @@ const serviceIcons = [
 ];
 ---
 
-<SectionWrapper bgColor="light" id="services">
+<SectionWrapper bgColor={bgColor} id="services">
   <div class="text-center mb-12 animate-on-scroll">
     <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Our Solutions</p>
     <h2 class="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
