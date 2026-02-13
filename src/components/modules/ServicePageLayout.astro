@@ -210,8 +210,8 @@ const faqSchema = {
       <h2 class="text-3xl md:text-4xl font-bold mb-8">Frequently Asked Questions</h2>
       <div class="space-y-4">
         {
-          faqs.map((faq) => (
-            <details class="group bg-neutral-50 rounded-xl border border-neutral-200 overflow-hidden">
+          faqs.map((faq, i) => (
+            <details class="group bg-neutral-50 rounded-xl border border-neutral-200 overflow-hidden" open={i === 0}>
               <summary class="flex items-center justify-between cursor-pointer p-6 font-semibold text-primary-500 hover:bg-neutral-100 transition-colors">
                 {faq.question}
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
