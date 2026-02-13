@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SectionWrapper from '../components/ui/SectionWrapper.astro';
+import StatsBar from '../components/modules/StatsBar.astro';
 import ContactSection from '../components/modules/ContactSection.astro';
 import { siteConfig } from '../config/site';
 ---
@@ -9,38 +9,31 @@ import { siteConfig } from '../config/site';
   title="Contact Magnified SMSF Specialists"
   description="Get in touch with Perth & Mandurah's SMSF specialists. Call +61 (8) 9584 6677, email info@magnifiedsmsf.com.au, or visit Unit 2/106 Pinjarra Road, Mandurah WA 6210."
 >
-  <!-- Hero Stats Bar -->
-  <SectionWrapper bgColor="primary" padding="md">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-      <div class="p-4">
-        <h3 class="font-bold text-white text-lg">Over 18 Years of Specialist Experience</h3>
-      </div>
-      <div class="p-4">
-        <h3 class="font-bold text-white text-lg">Local, Dedicated Support Team</h3>
-      </div>
-      <div class="p-4">
-        <h3 class="font-bold text-white text-lg">Personalised, Proactive Client Care</h3>
-      </div>
-      <div class="p-4">
-        <h3 class="font-bold text-white text-lg">Valued by SMSF Trustees Across Western Australia</h3>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/team-mandurah.jpg"
+        alt=""
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-[#b8bcbb]/75 backdrop-blur-sm"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-500 mb-4">
+          Your Path To <span class="text-accent-500">SMSF Clarity</span>
+        </h1>
+        <p class="text-lg md:text-xl text-primary-500/80 font-light max-w-3xl mx-auto">
+          Ready to take confident control of your Self-Managed Super Fund journey? Whether you have a specific question, want to book a consultation, or are ready to partner with Perth's expert SMSF specialists, we're here to help.
+        </p>
       </div>
     </div>
-    <div class="text-center mt-4">
-      <p class="text-primary-200 italic text-lg">
-        We act with Integrity, grow through Teamwork, spark Innovation, build Trust, and Empower people to thrive.
-      </p>
-    </div>
-  </SectionWrapper>
+  </section>
 
-  <!-- Contact Header -->
-  <SectionWrapper bgColor="white" padding="md">
-    <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Your Path To SMSF Clarity</h1>
-      <p class="text-neutral-700 text-lg leading-relaxed">
-        Ready to take confident control of your Self-Managed Super Fund (SMSF) journey? Whether you have a specific question, want to book a consultation, or are ready to partner with Perth's expert SMSF specialists, we're here to help.
-      </p>
-    </div>
-  </SectionWrapper>
+  <!-- Stats Bar -->
+  <StatsBar bgColor="primary" />
 
   <!-- Contact Form & Details -->
   <ContactSection

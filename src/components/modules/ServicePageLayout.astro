@@ -2,6 +2,7 @@
 import SectionWrapper from '../ui/SectionWrapper.astro';
 import Button from '../ui/Button.astro';
 import ReviewsSection from './ReviewsSection.astro';
+import StatsBar from './StatsBar.astro';
 import ContactSection from './ContactSection.astro';
 
 interface ServiceCard {
@@ -22,6 +23,7 @@ interface WhyChooseCard {
 interface Props {
   heroTitle: string;
   heroDescription: string;
+  heroImage?: string;
   servicesTitle: string;
   servicesIntro?: string;
   serviceCards: ServiceCard[];
@@ -39,6 +41,7 @@ interface Props {
 const {
   heroTitle,
   heroDescription,
+  heroImage,
   servicesTitle,
   servicesIntro,
   serviceCards,
@@ -51,14 +54,40 @@ const {
   bottomCtaText,
   bottomCtaButton,
 } = Astro.props;
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <!-- Hero -->
-<section class="bg-primary-500 text-white">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-    <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">{heroTitle}</h1>
-      <p class="text-lg text-primary-100 leading-relaxed">{heroDescription}</p>
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0">
+    {heroImage ? (
+      <img
+        src={heroImage}
+        alt=""
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+    ) : (
+      <div class="w-full h-full bg-neutral-400"></div>
+    )}
+    <div class="absolute inset-0 bg-[#b8bcbb]/75 backdrop-blur-sm"></div>
+  </div>
+  <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-500 mb-4">{heroTitle}</h1>
+      <p class="text-lg md:text-xl text-primary-500/80 font-light max-w-3xl mx-auto">{heroDescription}</p>
     </div>
   </div>
 </section>
@@ -104,6 +133,9 @@ const {
   </div>
 </SectionWrapper>
 
+<!-- FAQ Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
 <!-- FAQs -->
 <SectionWrapper bgColor="white">
   <div class="max-w-3xl mx-auto">
@@ -140,22 +172,7 @@ const {
 <ReviewsSection />
 
 <!-- Trust Badges -->
-<SectionWrapper bgColor="white" padding="md">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-    <div class="p-4">
-      <h3 class="font-bold text-primary-500">Over 18 Years of Specialist Experience</h3>
-    </div>
-    <div class="p-4">
-      <h3 class="font-bold text-primary-500">Local, Dedicated Support Team</h3>
-    </div>
-    <div class="p-4">
-      <h3 class="font-bold text-primary-500">Personalised, Proactive Client Care</h3>
-    </div>
-    <div class="p-4">
-      <h3 class="font-bold text-primary-500">Valued by SMSF Trustees Across Western Australia</h3>
-    </div>
-  </div>
-</SectionWrapper>
+<StatsBar bgColor="white" showTagline={false} showIcons={false} />
 
 <!-- Contact -->
 <ContactSection />

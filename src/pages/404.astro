@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/ui/Button.astro';
+---
+
+<Layout title="Page Not Found" description="The page you're looking for doesn't exist.">
+  <section class="bg-white py-24 md:py-32">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-accent-500 font-semibold text-lg mb-4">404</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-primary-500 mb-6">Page Not Found</h1>
+      <p class="text-neutral-600 text-lg max-w-lg mx-auto mb-10">
+        Sorry, the page you're looking for doesn't exist or has been moved. Let us help you find what you need.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/" variant="primary" size="lg">Back to Home</Button>
+        <Button href="/services/" variant="outline" size="lg">View Our Services</Button>
+        <Button href="/contact-us/" variant="secondary" size="lg">Contact Us</Button>
+      </div>
+    </div>
+  </section>
+</Layout>

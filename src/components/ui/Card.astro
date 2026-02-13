@@ -7,7 +7,7 @@ interface Props {
 
 const { href, class: className = '', hover = true } = Astro.props;
 
-const baseClasses = 'bg-white rounded-xl shadow-md overflow-hidden';
+const baseClasses = 'bg-white rounded-xl shadow-md overflow-hidden group';
 const hoverClasses = hover ? 'transition-all duration-300 hover:shadow-xl hover:-translate-y-1' : '';
 ---
 
