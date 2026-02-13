@@ -26,7 +26,8 @@ const steps = [
 ---
 
 <SectionWrapper bgColor="white" id="how-we-work">
-  <div class="text-center mb-12">
+  <div class="text-center mb-12 animate-on-scroll">
+    <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Our Process</p>
     <h2 class="text-3xl md:text-4xl font-bold mb-4">How We Work Together</h2>
   </div>
 
@@ -34,14 +35,19 @@ const steps = [
     {
       steps.map((step, i) => (
         <div class:list={['text-center relative animate-on-scroll', i > 0 && `delay-${i * 100}`]}>
-          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-500 text-white font-bold text-xl mb-4">
-            {step.number}
-          </div>
+          <!-- Dashed connector line between cards -->
           {i < steps.length - 1 && (
-            <div class="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-neutral-200" />
+            <div class="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 border-t-2 border-dashed border-accent-500/30 z-0" />
           )}
-          <h3 class="text-lg font-bold text-primary-500 mb-2">{step.title}</h3>
-          <p class="text-neutral-600 text-sm">{step.description}</p>
+
+          <!-- Card -->
+          <div class="relative z-10 bg-neutral-50 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-500 text-white font-bold text-xl mb-4 -mt-12 shadow-lg ring-4 ring-white">
+              {step.number}
+            </div>
+            <h3 class="text-lg font-bold text-primary-500 mb-2">{step.title}</h3>
+            <p class="text-neutral-600 text-sm">{step.description}</p>
+          </div>
         </div>
       ))
     }
