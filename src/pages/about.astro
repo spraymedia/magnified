@@ -66,31 +66,64 @@ const team = [
 
   <!-- Main Introduction -->
   <SectionWrapper bgColor="white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-        Your Trusted Partner for Retirement Control in Perth & Mandurah
-      </h2>
-      <p class="text-neutral-700 text-lg leading-relaxed mb-8">
-        At Magnified SMSF Specialists, we believe your retirement journey should be a source of confidence, not complexity. With over 18 years of specialist SMSF expertise, we are dedicated to empowering successful Australians like you to take complete control of your Self-Managed Super Fund (SMSF). Our mission is to simplify the intricate world of superannuation, helping you make informed, confident decisions that secure your financial future right here in Perth, Mandurah, and Regional WA.
-      </p>
-      <p class="text-neutral-600 text-lg mb-8">
-        Ready to simplify your SMSF and take control of your retirement?
-      </p>
-      <Button href="/contact-us/" variant="primary" size="lg">
-        Book Your Free Discovery Session
-      </Button>
-    </div>
-  </SectionWrapper>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left: Text Content -->
+      <div>
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2 animate-on-scroll">About Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 animate-on-scroll delay-100">
+          Your Trusted Partner for Retirement Control in Perth & Mandurah
+        </h2>
 
-  <!-- Hero Image -->
-  <SectionWrapper bgColor="light" padding="sm">
-    <div class="max-w-4xl mx-auto">
-      <img
-        src="/images/about-hero.jpg"
-        alt="Magnified SMSF Specialists Perth Mandurah team"
-        class="w-full rounded-xl shadow-xl"
-        loading="lazy"
-      />
+        <!-- Lead paragraph with accent left border -->
+        <div class="border-l-4 border-accent-500 pl-5 mb-6 animate-on-scroll delay-200">
+          <p class="text-neutral-700 text-lg leading-relaxed">
+            At Magnified SMSF Specialists, we believe your retirement journey should be a source of confidence, not complexity. With over 18 years of specialist SMSF expertise, we are dedicated to empowering successful Australians like you to take complete control of your Self-Managed Super Fund (SMSF).
+          </p>
+        </div>
+
+        <p class="text-neutral-700 text-lg leading-relaxed mb-6 animate-on-scroll delay-300">
+          Our mission is to simplify the intricate world of superannuation, helping you make informed, confident decisions that secure your financial future right here in Perth, Mandurah, and Regional WA.
+        </p>
+
+        <!-- CTA area with subtle divider -->
+        <div class="border-t border-neutral-200 pt-6 mt-2 animate-on-scroll delay-400">
+          <p class="text-neutral-600 text-lg mb-6">
+            Ready to simplify your SMSF and take control of your retirement?
+          </p>
+          <Button href="/contact-us/" variant="primary" size="lg">
+            Book Your Free Discovery Session
+          </Button>
+        </div>
+      </div>
+
+      <!-- Right: Image with Overlapping Quote Card -->
+      <div class="relative animate-on-scroll delay-200">
+        <!-- Decorative accent shape behind image -->
+        <div class="absolute -top-4 -right-4 w-full h-full rounded-2xl bg-accent-500/10 hidden lg:block"></div>
+
+        <!-- Main image -->
+        <img
+          src="/images/about-hero.jpg"
+          alt="Magnified SMSF Specialists Perth Mandurah team"
+          class="relative w-full rounded-2xl shadow-2xl ring-1 ring-neutral-200 max-h-[550px] object-cover"
+          loading="lazy"
+        />
+
+        <!-- Overlapping quote card -->
+        <div class="absolute -bottom-6 -left-4 right-8 lg:right-12 bg-accent-500 rounded-xl p-6 shadow-xl">
+          <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white/40 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5 3.871 3.871 0 0 1-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5 3.871 3.871 0 0 1-2.748-1.179z"/>
+            </svg>
+            <p class="text-white text-base md:text-lg font-medium leading-relaxed">
+              We act with Integrity, grow through Teamwork, spark Innovation, build Trust, and Empower people to thrive.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom spacer for overlapping quote card -->
+        <div class="h-10"></div>
+      </div>
     </div>
   </SectionWrapper>
 
