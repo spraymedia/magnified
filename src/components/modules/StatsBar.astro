@@ -10,7 +10,7 @@ interface Props {
 
 const {
   bgColor = 'accent',
-  showIcons = true,
+  showIcons = false,
   showTagline = true,
   padding = 'md',
 } = Astro.props;
@@ -46,10 +46,10 @@ const stats = [
 ---
 
 <SectionWrapper bgColor={bgColor} padding={padding}>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-center">
     {
       stats.map((stat) => (
-        <div class="p-4">
+        <div class="p-2">
           {showIcons && (
             <div class:list={[iconColor, 'mb-2']}>
               <div class="mx-auto w-fit" set:html={stat.icon} />
