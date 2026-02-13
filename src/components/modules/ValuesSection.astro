@@ -33,19 +33,26 @@ const values = [
 ];
 ---
 
-<SectionWrapper bgColor="light" id="values">
-  <div class="text-center mb-12">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">Guided By Our Values</h2>
-    <p class="text-neutral-600 text-lg max-w-2xl mx-auto">
+<SectionWrapper bgColor="accent" id="values">
+  <div class="text-center mb-12 animate-on-scroll">
+    <p class="text-white/70 font-semibold text-sm uppercase tracking-wide mb-2">Our Values</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Guided By Our Values</h2>
+    <p class="text-white/80 text-lg max-w-2xl mx-auto">
       At the heart of Magnified SMSF Specialists are values that shape how we work:
     </p>
   </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
     {
-      values.map((value) => (
-        <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow animate-on-scroll">
-          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary-50 text-primary-500 mb-4">
+      values.map((value, index) => (
+        <div class:list={[
+          'bg-white rounded-2xl p-6 text-center shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-on-scroll',
+          index === 1 && 'delay-100',
+          index === 2 && 'delay-200',
+          index === 3 && 'delay-300',
+          index === 4 && 'delay-400',
+        ]}>
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent-500/10 text-accent-500 mb-4">
             {value.icon === 'shield' && (
               <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
             )}
@@ -62,7 +69,7 @@ const values = [
               <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a8 8 0 0 0-16 0"></path><circle cx="10" cy="8" r="5"></circle><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></svg>
             )}
           </div>
-          <h3 class="text-lg font-bold text-primary-500 mb-2">{value.title}</h3>
+          <h3 class="text-lg font-bold text-accent-500 mb-2">{value.title}</h3>
           <p class="text-neutral-600 text-sm">{value.description}</p>
         </div>
       ))
