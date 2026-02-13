@@ -5,12 +5,14 @@ interface Props {
   bgColor?: 'accent' | 'primary' | 'white';
   showIcons?: boolean;
   showTagline?: boolean;
+  padding?: 'xs' | 'sm' | 'md' | 'lg';
 }
 
 const {
   bgColor = 'accent',
   showIcons = true,
   showTagline = true,
+  padding = 'md',
 } = Astro.props;
 
 const textColor = bgColor === 'white' ? 'text-primary-500' : 'text-white';
@@ -43,7 +45,7 @@ const stats = [
 ];
 ---
 
-<SectionWrapper bgColor={bgColor} padding="md">
+<SectionWrapper bgColor={bgColor} padding={padding}>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
     {
       stats.map((stat) => (
