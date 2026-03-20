@@ -110,8 +110,11 @@ const {
           </form>
 
           <script>
-            const form = document.getElementById('contact-form') as HTMLFormElement | null;
-            if (form) {
+            function initContactForm() {
+              const form = document.getElementById('contact-form') as HTMLFormElement | null;
+              if (!form || form.dataset.bound) return;
+              form.dataset.bound = 'true';
+
               form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const errorEl = document.getElementById('contact-error');
@@ -154,6 +157,10 @@ const {
                 }
               });
             }
+
+            // Run on initial load and after View Transitions navigation
+            initContactForm();
+            document.addEventListener('astro:page-load', initContactForm);
           </script>
         </div>
       )
