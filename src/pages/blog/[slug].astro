@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { formatBlogDate, getAllPosts, getPostBySlug, getRelatedPosts } from '../../lib/blog-api';
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { slug } = Astro.params;
+// Always fetch full post detail - the list endpoint doesn't include content_html
+const post = slug ? await getPostBySlug(slug) : null;
+
+if (!post) {
+  throw new Error(`Blog post not found for slug: ${slug}`);
+}
+
+const relatedPosts = await getRelatedPosts(post.slug, 3);
+const canonical = `https://magnifiedsmsf.com.au/blog/${post.slug}/`;
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.meta_title || post.title,
+  description: post.meta_description || post.excerpt || '',
+  image: post.og_image_path || post.featured_image_path || undefined,
+  datePublished: post.published_at,
+  dateModified: post.updated_at || post.published_at,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  author: post.author?.full_name ? { '@type': 'Person', name: post.author.full_name } : undefined,
+  publisher: { '@type': 'Organization', name: 'Magnified SMSF Specialists', url: 'https://magnifiedsmsf.com.au' },
+};
+---
+
+<Layout
+  title={post.meta_title || post.title}
+  description={post.meta_description || post.excerpt || undefined}
+  ogImage={post.og_image_path || post.featured_image_path || undefined}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <article class="pb-24">
+    <!-- Post header -->
+    <section class="bg-primary-500 px-4 py-20 text-white sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl">
+        <a href="/blog/" class="mb-6 inline-flex items-center gap-1.5 text-sm text-white/60 transition hover:text-white">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Blog
+        </a>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-white/70">
+          <span>{formatBlogDate(post.published_at)}</span>
+          {post.category ? <span class="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white/90">{post.category}</span> : null}
+        </div>
+        <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">{post.title}</h1>
+        {post.excerpt ? <p class="mt-6 max-w-3xl text-lg leading-relaxed text-white/80 sm:text-xl">{post.excerpt}</p> : null}
+      </div>
+    </section>
+
+    <!-- Post body -->
+    <section class="bg-white px-4 py-14 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl">
+        {post.featured_image_path ? (
+          <div class="mb-10 overflow-hidden rounded-3xl bg-neutral-100 shadow-xl">
+            <img src={post.featured_image_path} alt={post.featured_image_alt || post.title} class="aspect-[16/9] w-full object-cover" />
+          </div>
+        ) : null}
+
+        <div class="prose prose-lg max-w-none prose-headings:text-primary-500 prose-p:text-neutral-700 prose-a:text-accent-500 prose-strong:text-primary-500" set:html={post.content_html || ''} />
+
+        {post.tags && post.tags.length > 0 ? (
+          <div class="mt-12 flex flex-wrap gap-3 border-t border-neutral-200 pt-8">
+            {post.tags.map((tag) => <span class="rounded-full bg-neutral-100 px-3 py-1 text-sm text-neutral-600">{tag}</span>)}
+          </div>
+        ) : null}
+
+        {relatedPosts.length > 0 ? (
+          <section class="mt-16 border-t border-neutral-200 pt-12">
+            <div class="mx-auto max-w-4xl">
+              <h2 class="mb-8 text-2xl font-bold text-primary-500">You Might Also Like</h2>
+              <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                {relatedPosts.map((item) => (
+                  <a href={`/blog/${item.slug}/`} class="group overflow-hidden rounded-xl bg-neutral-50 transition-all hover:-translate-y-0.5 hover:shadow-md">
+                    {item.featured_image_path ? <img src={item.featured_image_path} alt={item.featured_image_alt || item.title} class="h-36 w-full object-cover" loading="lazy" /> : null}
+                    <div class="p-4">
+                      <div class="mb-2 text-xs text-neutral-500">{formatBlogDate(item.published_at)}</div>
+                      <h3 class="line-clamp-2 text-sm font-semibold text-primary-500 transition-colors group-hover:text-accent-500">{item.title}</h3>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+      </div>
+    </section>
+  </article>
+</Layout>

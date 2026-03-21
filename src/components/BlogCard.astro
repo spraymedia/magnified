@@ -1,0 +1,40 @@
+---
+import { formatBlogDate, truncateText, type BlogPost } from '../lib/blog-api';
+
+interface Props {
+  post: BlogPost;
+}
+
+const { post } = Astro.props;
+---
+
+<article class="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+  <a href={`/blog/${post.slug}/`}>
+    {post.featured_image_path ? (
+      <div class="relative h-48 w-full overflow-hidden bg-neutral-100">
+        <img src={post.featured_image_path} alt={post.featured_image_alt || post.title} class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+      </div>
+    ) : (
+      <div class="flex h-48 w-full items-center justify-center bg-neutral-100">
+        <span class="text-lg text-neutral-400">Magnified SMSF</span>
+      </div>
+    )}
+
+    <div class="p-6">
+      <div class="mb-3 flex items-center gap-3 text-sm text-neutral-500">
+        <span>{formatBlogDate(post.published_at)}</span>
+        {post.category ? <span class="rounded-full bg-accent-50 px-2.5 py-0.5 text-xs font-medium text-accent-500">{post.category}</span> : null}
+      </div>
+
+      <h2 class="mb-2 line-clamp-2 text-lg font-semibold text-primary-500 transition-colors group-hover:text-accent-500">
+        {post.title}
+      </h2>
+
+      {post.excerpt ? <p class="mb-4 line-clamp-3 text-sm leading-relaxed text-neutral-600">{truncateText(post.excerpt, 150)}</p> : null}
+
+      <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-500 transition-colors group-hover:text-accent-600">
+        Read More →
+      </span>
+    </div>
+  </a>
+</article>
