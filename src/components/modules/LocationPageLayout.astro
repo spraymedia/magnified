@@ -11,10 +11,14 @@ import { siteConfig } from '../../config/site';
 
 interface Props {
   locationName: string;
+  heroTitle?: string;
   heroImage?: string;
   heroSubheading: string;
   trustedPartnerText: string;
   servicesIntro: string;
+  localSeoTitle?: string;
+  localSeoText?: string;
+  localSeoItems?: string[];
   isThisYouIntro: string;
   whyTrustsIntro: string;
   dedicatedSupportText: string;
@@ -24,10 +28,14 @@ interface Props {
 
 const {
   locationName,
+  heroTitle,
   heroImage,
   heroSubheading,
   trustedPartnerText,
   servicesIntro,
+  localSeoTitle,
+  localSeoText,
+  localSeoItems = [],
   isThisYouIntro,
   whyTrustsIntro,
   dedicatedSupportText,
@@ -55,7 +63,7 @@ const {
     <div class="max-w-2xl">
       <div class="bg-[#b8bcbb]/60 backdrop-blur-md rounded-3xl p-10 md:p-12 shadow-xl">
         <h1 class="text-3xl md:text-4xl font-bold text-primary-500 leading-tight mb-5">
-          SMSF Specialists in <span class="text-accent-500">{locationName}</span>
+          {heroTitle ? heroTitle : <>SMSF Specialists in <span class="text-accent-500">{locationName}</span></>}
         </h1>
         <p class="text-base md:text-lg text-neutral-700 leading-relaxed mb-6">
           {heroSubheading}
@@ -141,6 +149,28 @@ const {
   title={`Our SMSF Services Tailored for ${locationName} Trustees`}
   subtitle={servicesIntro}
 />
+
+{
+  localSeoTitle && localSeoText && (
+    <SectionWrapper bgColor="light" padding="md">
+      <div class="max-w-4xl mx-auto animate-on-scroll">
+        <p class="text-accent-500 font-semibold text-sm uppercase tracking-wide mb-2">Local SMSF Support</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-5">{localSeoTitle}</h2>
+        <p class="text-neutral-700 text-lg leading-relaxed border-l-4 border-accent-500 pl-5 mb-6">{localSeoText}</p>
+        {localSeoItems.length > 0 && (
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {localSeoItems.map((item) => (
+              <li class="flex items-start gap-3 text-neutral-700">
+                <span class="mt-2 h-2 w-2 rounded-full bg-accent-500 flex-shrink-0"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </SectionWrapper>
+  )
+}
 
 <!-- Is This You -->
 <SectionWrapper bgColor="accent">

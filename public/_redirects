@@ -1,0 +1,5 @@
+# Domain consolidation and legacy WordPress asset redirects.
+https://www.magnifiedsmsf.com.au/* https://magnifiedsmsf.com.au/:splat 301
+http://www.magnifiedsmsf.com.au/* https://magnifiedsmsf.com.au/:splat 301
+http://magnifiedsmsf.com.au/* https://magnifiedsmsf.com.au/:splat 301
+/wp-content/uploads/2025/07/Magnified-SMSF-Specialists-Your-Guide-to-Self-Managed-Super-Funds-SMSF.pdf /Magnified-SMSF-Specialists-Your-Guide-to-Self-Managed-Super-Funds-SMSF.pdf 301
