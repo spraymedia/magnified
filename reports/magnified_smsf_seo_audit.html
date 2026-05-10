@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magnified SMSF SEO & Lead Growth Audit</title>
+  <style>
+    :root {
+      --ink:#172033;
+      --muted:#5d6778;
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --line:#dde3ec;
+      --blue:#175cff;
+      --green:#11845b;
+      --amber:#a76500;
+      --red:#b42318;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    header {
+      background:linear-gradient(135deg,#102a5c,#175cff);
+      color:white;
+      padding:48px 28px;
+    }
+    header .wrap, main { max-width:1100px; margin:0 auto; }
+    h1 { margin:0 0 12px; font-size:38px; line-height:1.1; }
+    h2 { margin:36px 0 14px; padding-bottom:8px; border-bottom:2px solid var(--line); font-size:26px; }
+    h3 { margin:24px 0 8px; font-size:20px; }
+    p { margin:8px 0 14px; }
+    main { padding:28px; }
+    .card {
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:22px;
+      margin:18px 0;
+      box-shadow:0 4px 18px rgba(16,42,92,.06);
+    }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+    .metric { background:#f8fbff; border:1px solid #dbe8ff; border-radius:12px; padding:16px; }
+    .metric strong { display:block; font-size:26px; color:var(--blue); }
+    .tag { display:inline-block; border-radius:999px; padding:4px 10px; font-size:13px; font-weight:700; margin-right:6px; }
+    .critical { background:#fee4e2; color:var(--red); }
+    .high { background:#fff2cc; color:var(--amber); }
+    .medium { background:#eaf3ff; color:#1554b7; }
+    .quickwin { background:#dcfae6; color:var(--green); }
+    table { width:100%; border-collapse:collapse; margin:12px 0; font-size:15px; }
+    th,td { border:1px solid var(--line); padding:10px; text-align:left; vertical-align:top; }
+    th { background:#eef3fb; }
+    code { background:#eef3fb; padding:2px 5px; border-radius:5px; }
+    ul,ol { padding-left:24px; }
+    .callout { border-left:5px solid var(--blue); background:#eef5ff; padding:14px 16px; border-radius:8px; }
+    .danger { border-left-color:var(--red); background:#fff1f0; }
+    .ok { border-left-color:var(--green); background:#ecfdf3; }
+    .small { color:var(--muted); font-size:14px; }
+    @media print { body { background:white; } .card { box-shadow:none; break-inside:avoid; } header { background:#102a5c; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Magnified SMSF SEO & Lead Growth Audit</h1>
+      <p>Priority technical, content, local SEO and Google Ads recommendations for magnifiedsmsf.com.au.</p>
+      <p class="small" style="color:#dbe8ff">Prepared from site crawl, Google Search Console data, keyword research and competitor checks.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Executive summary</h2>
+      <p>Magnified SMSF is in a decent technical position, but it is not yet strong enough for the main Perth SMSF commercial keywords. The fastest path to more enquiries is to fix domain consolidation, strengthen the Perth and Mandurah landing pages, add more “SMSF accountant” language where accurate, and run tightly controlled Google Ads campaigns with call/form tracking.</p>
+      <div class="callout danger"><strong>Top technical issue:</strong> <code>https://www.magnifiedsmsf.com.au/</code> currently resolves separately instead of 301 redirecting to <code>https://magnifiedsmsf.com.au/</code>. Fixing this should be first.</div>
+    </section>
+
+    <section class="card">
+      <h2>Google Search Console snapshot</h2>
+      <p><strong>Period checked:</strong> 2026-02-06 to 2026-05-07</p>
+      <div class="grid">
+        <div class="metric"><strong>78</strong>Clicks from page data</div>
+        <div class="metric"><strong>2,727</strong>Impressions from page data</div>
+        <div class="metric"><strong>~14.5</strong>Weighted average position</div>
+      </div>
+      <h3>Top visible pages</h3>
+      <table>
+        <thead><tr><th>Page</th><th>Clicks</th><th>Impressions</th><th>Average position</th></tr></thead>
+        <tbody>
+          <tr><td>Homepage</td><td>60</td><td>970</td><td>19.1</td></tr>
+          <tr><td>www homepage</td><td>10</td><td>137</td><td>7.5</td></tr>
+          <tr><td>Financial Reporting & Compliance</td><td>4</td><td>243</td><td>14.2</td></tr>
+          <tr><td>SMSF Setup & Administration</td><td>4</td><td>324</td><td>22.1</td></tr>
+        </tbody>
+      </table>
+      <h3>Target query examples</h3>
+      <table>
+        <thead><tr><th>Query</th><th>Impressions</th><th>Average position</th></tr></thead>
+        <tbody>
+          <tr><td>smsf specialist perth</td><td>51</td><td>13.9</td></tr>
+          <tr><td>smsf specialists perth</td><td>74</td><td>10.2</td></tr>
+          <tr><td>smsf specialists</td><td>139</td><td>24.4</td></tr>
+          <tr><td>smsf administration perth</td><td>12</td><td>50.6</td></tr>
+          <tr><td>smsf compliance specialists</td><td>22</td><td>47.7</td></tr>
+          <tr><td>smsf tax planning</td><td>8</td><td>39.4</td></tr>
+          <tr><td>smsf setup perth</td><td>9</td><td>55.3</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Keyword opportunities</h2>
+      <table>
+        <thead><tr><th>Keyword</th><th>Monthly volume</th><th>CPC</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>self managed super fund</td><td>9,900</td><td>$2.11</td><td>Broad informational/commercial.</td></tr>
+          <tr><td>smsf accountant near me</td><td>260</td><td>$4.52</td><td>High-intent local search.</td></tr>
+          <tr><td>self managed super fund perth</td><td>170</td><td>$4.14</td><td>Low competition, strong fit.</td></tr>
+          <tr><td>smsf accountant perth</td><td>170</td><td>$3.35</td><td>Primary Perth money keyword.</td></tr>
+          <tr><td>smsf accountants perth</td><td>170</td><td>$3.34</td><td>Primary Perth money keyword.</td></tr>
+          <tr><td>smsf perth</td><td>90</td><td>$5.10</td><td>Good commercial umbrella term.</td></tr>
+          <tr><td>smsf registration</td><td>90</td><td>$6.85</td><td>Setup content/ads opportunity.</td></tr>
+          <tr><td>smsf auditor perth</td><td>70</td><td>n/a</td><td>Only target if relevant to services/partnership.</td></tr>
+          <tr><td>smsf audit perth</td><td>30</td><td>n/a</td><td>Be careful if audit is not directly provided.</td></tr>
+          <tr><td>smsf setup perth</td><td>10</td><td>n/a</td><td>Low volume, high intent.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><strong>Positioning gap:</strong> Magnified uses “SMSF Specialists” heavily, which is good branding, but the market searches more often for “SMSF accountant Perth”, “SMSF accountants Perth”, “self managed super fund Perth”, “SMSF accountant near me”, “SMSF registration”, and “SMSF tax return”. Add accountant/accounting/compliance language where accurate and compliant.</div>
+    </section>
+
+    <section class="card">
+      <h2>Competitor patterns</h2>
+      <p>Competitors found directionally include SMSF Australia, SMSF Services Perth, WA SMSF Specialists, Pine SMSF, Greenwood Accountants Perth, Armada and Blueprint Wealth.</p>
+      <ul>
+        <li>SMSF Australia has a long exact-match “SMSF Accountants Perth” page.</li>
+        <li>SMSF Services Perth benefits from an exact-match domain/brand and uses “SMSF Accountant Perth”, “SMSF Consultants Perth” and “SMSF Specialist Advisor”.</li>
+        <li>WA SMSF Specialists uses strong proof: Perth, Western Australia, trusted by 200+ clients, 20 years.</li>
+        <li>Pine SMSF has a direct value proposition: “Perth’s complete end to end SMSF experts”.</li>
+        <li>Greenwood has exact “SMSF Accountants Perth” H1/title and accounting/tax alignment.</li>
+        <li>Blueprint has broader “Self Managed Super Funds Perth - SMSF Advice” coverage and a quiz conversion asset.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Priority action plan</h2>
+      <h3><span class="tag critical">Critical</span>1. Fix canonical/domain consolidation</h3>
+      <ul>
+        <li>301 redirect all <code>www</code> URLs to the non-www version.</li>
+        <li>Keep canonical tags pointing to non-www.</li>
+        <li>Redirect HTTP to HTTPS non-www.</li>
+        <li>Monitor GSC as the duplicate www homepage consolidates.</li>
+      </ul>
+      <h3><span class="tag critical">Critical</span>2. Redirect old PDF and WordPress URLs</h3>
+      <ul>
+        <li>Choose one canonical SMSF guide PDF or, ideally, a dedicated HTML guide landing page.</li>
+        <li>Redirect old <code>/wp-content/uploads/...</code> PDF URLs to the current guide or guide page.</li>
+        <li>Add the guide page to the sitemap if it is intended to rank/capture leads.</li>
+      </ul>
+      <h3><span class="tag high">High</span>3. Optimise the Perth money page</h3>
+      <p>Target <code>/perth-smsf-specialists/</code> around “SMSF accountant Perth”, “SMSF accountants Perth”, “self managed super fund Perth”, “SMSF Perth” and “SMSF specialist Perth”.</p>
+      <p><strong>Suggested title:</strong> SMSF Accountants Perth | SMSF Specialists WA</p>
+      <p><strong>Suggested H1:</strong> SMSF Accountants & Specialists in Perth</p>
+      <ul>
+        <li>Add sections for setup, administration, annual returns, compliance, tax planning, pension phase, investment strategy and why use a specialist SMSF accountant.</li>
+        <li>Add Mandurah-based/serving Perth online or in person positioning.</li>
+        <li>Add CPA Practice, SAN AFSL credentials, testimonials and FAQs.</li>
+      </ul>
+      <h3><span class="tag high">High</span>4. Build local “SMSF accountant near me” intent</h3>
+      <ul>
+        <li>Use Google Business Profile, reviews, NAP consistency, embedded map, directions and suburb mentions.</li>
+        <li>Strengthen Mandurah and Perth landing pages rather than over-building thin suburb pages.</li>
+      </ul>
+      <h3><span class="tag high">High</span>5. Strengthen Mandurah local dominance</h3>
+      <ul>
+        <li>Add “SMSF Accountant Mandurah” language.</li>
+        <li>Add address detail: Unit 2/106 Pinjarra Road, Mandurah WA 6210.</li>
+        <li>Add relevant local areas such as Halls Head, Greenfields, Meadow Springs, Falcon, Erskine, Lakelands, Pinjarra and Peel if accurate.</li>
+        <li>Add parking/visit info, appointment types, local FAQ and LocalBusiness schema.</li>
+      </ul>
+      <h3><span class="tag high">High</span>6. Improve setup and compliance pages</h3>
+      <ul>
+        <li>Add “SMSF registration” content to the setup/admin page.</li>
+        <li>Explain trust deed, corporate trustee, ABN/TFN, ATO registration, bank account, rollover, investment strategy and annual obligations.</li>
+        <li>Retitle compliance page toward “SMSF Compliance Specialists Mandurah & Perth”.</li>
+        <li>Add sections for annual SMSF return, financial statements, ATO compliance, audit support, records, contributions, pensions and Class Super reporting.</li>
+      </ul>
+      <h3><span class="tag medium">Medium</span>7. Add schema and on-page cleanup</h3>
+      <ul>
+        <li>Add LocalBusiness / FinancialService, Service, FAQPage, BreadcrumbList, Article and Person schema where relevant.</li>
+        <li>Shorten long blog titles and service titles.</li>
+        <li>Improve short meta descriptions.</li>
+        <li>Add missing image alt text.</li>
+        <li>Remove, noindex or redirect the “Coming Soon” page if it has no purpose.</li>
+      </ul>
+      <h3><span class="tag medium">Medium</span>8. Build internal links and content cluster</h3>
+      <ul>
+        <li>Link blog posts to service pages with anchors like “SMSF annual return”, “SMSF investment strategy”, “SMSF setup”, “SMSF tax planning” and “SMSF records”.</li>
+        <li>Add “Need help with this?” CTA boxes inside blog posts.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Recommended content plan</h2>
+      <div class="grid">
+        <div>
+          <h3>Commercial/supporting</h3>
+          <ul>
+            <li>SMSF Accountant Perth: What to Look For</li>
+            <li>SMSF Setup Perth: Costs, Steps and Compliance</li>
+            <li>SMSF Annual Return: What Perth and Mandurah Trustees Need to Know</li>
+            <li>SMSF Tax Return Checklist</li>
+            <li>SMSF Registration: Step-by-Step Guide</li>
+            <li>SMSF Accountant vs SMSF Adviser: What’s the Difference?</li>
+            <li>How Much Does SMSF Administration Cost?</li>
+            <li>SMSF Compliance Checklist for Trustees</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Local</h3>
+          <ul>
+            <li>SMSF Accountant Mandurah</li>
+            <li>SMSF Accountant Perth</li>
+            <li>SMSF Services for Peel Region Trustees</li>
+            <li>SMSF Support for Regional WA Trustees</li>
+          </ul>
+        </div>
+        <div>
+          <h3>FAQ/high-intent</h3>
+          <ul>
+            <li>Do I need an accountant for my SMSF?</li>
+            <li>Can I set up an SMSF myself?</li>
+            <li>What does SMSF administration include?</li>
+            <li>How often should my SMSF investment strategy be reviewed?</li>
+            <li>What happens if my SMSF annual return is late?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Google Ads plan</h2>
+      <table>
+        <thead><tr><th>Campaign</th><th>Ad groups</th><th>Landing page</th></tr></thead>
+        <tbody>
+          <tr><td>Perth SMSF Accountant</td><td>smsf accountant perth; smsf accountants perth; self managed super fund perth; smsf perth</td><td>Optimised Perth page or dedicated PPC landing page</td></tr>
+          <tr><td>SMSF Setup / Registration</td><td>smsf setup perth; smsf registration; set up smsf; self managed super fund setup</td><td>Setup & Administration page</td></tr>
+          <tr><td>SMSF Compliance / Annual Return</td><td>smsf compliance; smsf annual return; smsf tax return; smsf administration perth</td><td>Financial Reporting & Compliance page</td></tr>
+          <tr><td>Mandurah/Peel local</td><td>smsf accountant mandurah; smsf specialist mandurah; smsf services mandurah</td><td>Mandurah page</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Suggested negative keywords:</strong> jobs, course, salary, free template, software only, ATO login, super fund lookup, crypto unless wanted, audit if independent SMSF audit is not directly provided.</p>
+      <p><strong>Messaging:</strong> SMSF Accountants Perth; SMSF Specialists Mandurah & Perth; Book a Free Discovery Session; CPA Practice; 18+ Years SMSF Experience; Local WA SMSF Support; Call +61 (8) 9584 6677.</p>
+    </section>
+
+    <section class="card">
+      <h2>Conversion tracking checklist</h2>
+      <ul>
+        <li>Track phone click events.</li>
+        <li>Track form submissions via <code>/thank-you/</code>.</li>
+        <li>Track “Download Free SMSF Guide”.</li>
+        <li>Add call assets in Google Ads.</li>
+        <li>Capture UTM parameters into forms if possible.</li>
+        <li>Confirm mobile header phone button is prominent.</li>
+        <li>Fix any large blank sections if they are real rendering/spacing issues.</li>
+      </ul>
+    </section>
+
+    <section class="card ok">
+      <h2>Shortest path to more leads</h2>
+      <ol>
+        <li>Fix www redirect and old PDF/coming-soon index waste.</li>
+        <li>Rework Perth page around “SMSF Accountant(s) Perth” and “Self Managed Super Fund Perth”.</li>
+        <li>Strengthen Mandurah page for local trust and conversion.</li>
+        <li>Improve compliance/setup pages around GSC terms.</li>
+        <li>Launch controlled Google Ads campaigns for Perth/Peel with call tracking.</li>
+        <li>Build the SMSF accountant/setup/compliance content cluster and internal links.</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>
