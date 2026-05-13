@@ -51,8 +51,8 @@ export const siteConfig: SiteConfig = {
     country: 'Australia',
     full: 'Unit 2/106 Pinjarra Road, Mandurah WA 6210',
   },
-  phone: '+61 (8) 9584 6677',
-  phoneFormatted: '08 9584 6677',
+  phone: '+61 (8) 9456 0010',
+  phoneFormatted: '+61 (8) 9456 0010',
   email: 'info@magnifiedsmsf.com.au',
   social: {
     facebook: 'https://www.facebook.com/profile.php?id=61578271446627',
