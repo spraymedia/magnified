@@ -11,6 +11,7 @@ export interface SiteConfig {
     full: string;
   };
   phone: string;
+  phoneHref: string;
   phoneFormatted: string;
   email: string;
   social: {
@@ -52,6 +53,7 @@ export const siteConfig: SiteConfig = {
     full: 'Unit 2/106 Pinjarra Road, Mandurah WA 6210',
   },
   phone: '+61 (8) 9456 0010',
+  phoneHref: '+61894560010',
   phoneFormatted: '+61 (8) 9456 0010',
   email: 'info@magnifiedsmsf.com.au',
   social: {

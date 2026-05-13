@@ -21,7 +21,7 @@ import { siteConfig } from '../config/site';
         <Button href="/" variant="primary" size="lg">
           Back to Home
         </Button>
-        <Button href={`tel:${siteConfig.phone.replace(/\s/g, '')}`} variant="outline" size="lg">
+        <Button href={`tel:${siteConfig.phoneHref}`} variant="outline" size="lg">
           Call Us Now: {siteConfig.phone}
         </Button>
       </div>
