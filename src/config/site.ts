@@ -22,7 +22,11 @@ export interface SiteConfig {
     weekend: string;
     note: string;
   };
-  afsl: string;
+  licensee: string;
+  licenseeAbbreviation: string;
+  licenseeAfsl: string;
+  corporateAuthorisedRepresentativeNumber: string;
+  magdaAuthorisedRepresentativeNumber: string;
   founded: string;
   coordinates: {
     lat: number;
@@ -64,7 +68,11 @@ export const siteConfig: SiteConfig = {
     weekend: 'Closed',
     note: 'After-hours appointments available by arrangement',
   },
-  afsl: '430062',
+  licensee: 'Advice Assist Australia Pty Ltd',
+  licenseeAbbreviation: 'AAA',
+  licenseeAfsl: '496692',
+  corporateAuthorisedRepresentativeNumber: '001317114',
+  magdaAuthorisedRepresentativeNumber: '001245707',
   founded: '2006',
   coordinates: {
     lat: -32.5269,
